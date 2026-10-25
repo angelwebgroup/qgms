@@ -18,24 +18,28 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <!-- Hero Banner: The Kindness Station -->
-<section class="kindness-hero position-relative text-white overflow-hidden" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%); padding: 100px 0 90px;">
-    <div class="position-absolute w-100 h-100" style="top: 0; left: 0; opacity: 0.15; background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 24px 24px;"></div>
-    <div class="container position-relative z-1 text-center">
-        <div class="badge px-4 py-2 mb-3 text-uppercase font-weight-bold" style="background: rgba(0, 154, 209, 0.25); color: #38bdf8; border: 1px solid rgba(0, 154, 209, 0.4); border-radius: 30px; letter-spacing: 1.5px; font-size: 13px;">
-            Recognizing Everyday Compassion
+<section class="page-hero-wrapper text-center">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="container page-hero-content">
+        <div class="hero-tag-badge home-hero-badge">
+            <i class="fa fa-heart"></i> Recognizing Everyday Compassion
         </div>
-        <h1 class="display-3 font-weight-bolder mb-3" style="font-family: 'Outfit', sans-serif; letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-            THE KINDNESS STATION
+        <h1 class="page-hero-title mb-3">
+            THE <span class="hero-highlight-text">KINDNESS</span> STATION
         </h1>
-        <p class="h4 font-weight-light mb-4" style="color: #e0e7ff; max-width: 780px; margin: 0 auto; line-height: 1.5;">
+        <p class="h4 font-weight-light mb-3" style="color: #bae6fd; max-width: 780px; margin: 0 auto; font-size: 20px; line-height: 1.5; text-shadow: 0 2px 10px rgba(0,0,0,0.4);">
             Catching &amp; Recognizing Acts of Goodness Around the World
         </p>
-        <p class="lead mb-5" style="color: #cbd5e1; max-width: 700px; margin: 0 auto; font-size: 16px; line-height: 1.8;">
+        <p class="lead mb-4" style="color: #e2e8f0; max-width: 720px; margin: 0 auto; font-size: 16px; line-height: 1.8;">
             Inspiring Kindness is the world's first platform that transforms real acts of care into an ongoing ripple effect &mdash; catching kindness, rewarding compassion, and inspiring others to do the same.
         </p>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="register.php" class="btn btn-donate mr-3 mb-2" style="padding: 14px 36px; font-size: 15px;">Catch Kindness Now</a>
-            <a href="about.php" class="btn btn-outline-light mb-2" style="border-radius: 50px; padding: 14px 34px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Learn How It Works</a>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+            <a href="register.php" class="btn btn-donate mr-sm-3 mb-2" style="padding: 14px 38px; font-size: 15px;">
+                <i class="fa fa-sparkles mr-1"></i> Catch Kindness Now
+            </a>
+            <a href="about.php" class="btn btn-hero-glass mb-2">
+                <span>Learn How It Works &rarr;</span>
+            </a>
         </div>
     </div>
 </section>

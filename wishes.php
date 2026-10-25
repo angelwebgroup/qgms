@@ -29,11 +29,24 @@ $wishesList = $stmt->fetchAll();
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- Header Banner -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);">
-    <div class="container text-center">
-        <h1 class="display-4 font-weight-bold mb-2">Child Wishes Gallery</h1>
-        <p class="lead" style="color: #cbd5e1; font-size: 16px;">Directly fulfill wishes for children through Calfresh, EAhousing, and NCCP partnerships.</p>
+<!-- Hero Banner: Child Wishes Gallery -->
+<section class="page-hero-wrapper text-center">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="container page-hero-content">
+        <div class="hero-tag-badge">
+            <i class="fa fa-gift"></i> Verified Community Impact
+        </div>
+        <h1 class="page-hero-title">
+            CHILD <span class="hero-highlight-text">WISHES GALLERY</span>
+        </h1>
+        <p class="page-hero-subtitle">
+            Directly fulfill urgent wishes for children and families through verified CalFresh, EAhousing, and NCCP partnerships.
+        </p>
+        <div class="hero-breadcrumb">
+            <a href="index.php"><i class="fa fa-home"></i> Home</a>
+            <span>&bull;</span>
+            <span class="text-white">Wishes Gallery</span>
+        </div>
     </div>
 </section>
 

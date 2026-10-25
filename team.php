@@ -17,11 +17,24 @@ $currentPage = "team";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- Header Banner -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);">
-    <div class="container text-center">
-        <h1 class="display-4 font-weight-bold mb-2">Our Leadership Team</h1>
-        <p class="lead" style="color: #cbd5e1; font-size: 16px;">Passionate visionaries, behavioral scientists, and community advocates.</p>
+<!-- Hero Banner: Our Leadership Team -->
+<section class="page-hero-wrapper text-center">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="container page-hero-content">
+        <div class="hero-tag-badge">
+            <i class="fa fa-users"></i> Visionaries &bull; Leaders &bull; Scientists
+        </div>
+        <h1 class="page-hero-title">
+            OUR <span class="hero-highlight-text">LEADERSHIP TEAM</span>
+        </h1>
+        <p class="page-hero-subtitle">
+            Passionate visionaries, behavioral scientists, and community advocates dedicated to recognizing kindness across the globe.
+        </p>
+        <div class="hero-breadcrumb">
+            <a href="index.php"><i class="fa fa-home"></i> Home</a>
+            <span>&bull;</span>
+            <span class="text-white">Our Team</span>
+        </div>
     </div>
 </section>
 

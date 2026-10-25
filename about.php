@@ -17,11 +17,24 @@ $currentPage = "about";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- Breadcrumb / Header -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);">
-    <div class="container text-center">
-        <h1 class="display-4 font-weight-bold mb-2">About Our Movement</h1>
-        <p class="lead" style="color: #cbd5e1; font-size: 16px;">Transforming everyday compassion into a measurable global ripple effect.</p>
+<!-- Hero Banner: About Our Movement -->
+<section class="page-hero-wrapper text-center">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="container page-hero-content">
+        <div class="hero-tag-badge">
+            <i class="fa fa-info-circle"></i> Our Movement &bull; Our Mission
+        </div>
+        <h1 class="page-hero-title">
+            ABOUT <span class="hero-highlight-text">OUR MOVEMENT</span>
+        </h1>
+        <p class="page-hero-subtitle">
+            Transforming everyday compassion into a measurable global ripple effect &mdash; catching acts of goodness and empowering communities worldwide.
+        </p>
+        <div class="hero-breadcrumb">
+            <a href="index.php"><i class="fa fa-home"></i> Home</a>
+            <span>&bull;</span>
+            <span class="text-white">About Us</span>
+        </div>
     </div>
 </section>
 

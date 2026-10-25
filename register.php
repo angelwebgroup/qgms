@@ -195,6 +195,20 @@ require_once __DIR__ . '/includes/header.php';
                 controls: 1,
                 rel: 0,
                 modestbranding: 1
+            },
+            events: {
+                'onStateChange': function(e) {
+                    if (e.data === window.YT.PlayerState.PLAYING) {
+                        const bgAudio = document.getElementById('bg-music-player');
+                        if (bgAudio && !bgAudio.paused) {
+                            bgAudio.pause();
+                            const soundBtn = document.getElementById('sound-toggle');
+                            const soundIcon = document.getElementById('sound-toggle-icon');
+                            if (soundBtn) soundBtn.classList.remove('playing');
+                            if (soundIcon) soundIcon.className = 'fa fa-volume-off';
+                        }
+                    }
+                }
             }
         });
     }

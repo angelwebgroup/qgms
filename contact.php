@@ -18,11 +18,24 @@ $currentPage = "contact";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- Header Banner -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);">
-    <div class="container text-center">
-        <h1 class="display-4 font-weight-bold mb-2">Get in Touch</h1>
-        <p class="lead" style="color: #cbd5e1; font-size: 16px;">We would love to hear from you. Reach out with inquiries, partnerships, or stories.</p>
+<!-- Hero Banner: Get in Touch -->
+<section class="page-hero-wrapper text-center">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="container page-hero-content">
+        <div class="hero-tag-badge">
+            <i class="fa fa-envelope-open"></i> Connect &bull; Collaborate &bull; Share
+        </div>
+        <h1 class="page-hero-title">
+            GET IN <span class="hero-highlight-text">TOUCH</span>
+        </h1>
+        <p class="page-hero-subtitle">
+            We would love to hear from you. Reach out with inquiries, partnerships, sponsorship ideas, or inspiring kindness stories.
+        </p>
+        <div class="hero-breadcrumb">
+            <a href="index.php"><i class="fa fa-home"></i> Home</a>
+            <span>&bull;</span>
+            <span class="text-white">Contact Us</span>
+        </div>
     </div>
 </section>
 

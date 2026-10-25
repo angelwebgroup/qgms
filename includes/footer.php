@@ -109,9 +109,15 @@
         </div>
     </div>
 
+    <!-- Persistent Background Audio Player -->
+    <audio id="bg-music-player" loop preload="auto">
+        <source src="audio/background_music.mpeg" type="audio/mpeg">
+        <source src="audio/background_music.mpeg" type="audio/mp3">
+    </audio>
+
     <!-- Floating Audio / Accessibility Button -->
-    <button class="sound-toggle-btn" id="sound-toggle" title="Toggle Background Music / Audio" aria-label="Audio">
-        <i class="fa fa-volume-up"></i>
+    <button class="sound-toggle-btn" id="sound-toggle" title="Play / Mute Background Music" aria-label="Toggle Background Music">
+        <i class="fa fa-volume-off" id="sound-toggle-icon"></i>
     </button>
 
     <!-- Core Scripts -->
@@ -150,17 +156,99 @@
         });
     });
 
-    // Sound toggle state
-    let soundEnabled = true;
-    document.getElementById('sound-toggle')?.addEventListener('click', function() {
-        soundEnabled = !soundEnabled;
-        const icon = this.querySelector('i');
-        if (soundEnabled) {
-            icon.className = 'fa fa-volume-up';
-        } else {
-            icon.className = 'fa fa-volume-off';
+    // Background Audio Controller for /audio/background_music.mpeg
+    (function() {
+        const audio = document.getElementById('bg-music-player');
+        const btn = document.getElementById('sound-toggle');
+        const icon = document.getElementById('sound-toggle-icon');
+        if (!audio || !btn || !icon) return;
+
+        // Set soothing ambient volume
+        audio.volume = 0.35;
+
+        const isIntroPage = window.location.pathname.indexOf('intro.php') !== -1;
+        const isEnabled = localStorage.getItem('qgms_audio_enabled') === 'true';
+
+        // Resume playback position across pages seamlessly
+        const savedPos = parseFloat(sessionStorage.getItem('qgms_audio_pos') || '0');
+        if (!isNaN(savedPos) && savedPos > 0) {
+            audio.currentTime = savedPos;
         }
-    });
+
+        // Save position periodically & on unload
+        setInterval(function() {
+            if (!audio.paused && audio.currentTime > 0) {
+                sessionStorage.setItem('qgms_audio_pos', audio.currentTime);
+            }
+        }, 1500);
+
+        window.addEventListener('beforeunload', function() {
+            if (!audio.paused && audio.currentTime > 0) {
+                sessionStorage.setItem('qgms_audio_pos', audio.currentTime);
+            }
+        });
+
+        function updateUI(playing) {
+            if (playing) {
+                icon.className = 'fa fa-volume-up';
+                btn.classList.add('playing');
+                btn.setAttribute('title', 'Mute Background Music');
+            } else {
+                icon.className = 'fa fa-volume-off';
+                btn.classList.remove('playing');
+                btn.setAttribute('title', 'Play Background Music');
+            }
+        }
+
+        function playMusic() {
+            audio.play().then(function() {
+                localStorage.setItem('qgms_audio_enabled', 'true');
+                updateUI(true);
+            }).catch(function(err) {
+                console.log('Audio playback requires user interaction:', err);
+                updateUI(false);
+            });
+        }
+
+        function pauseMusic() {
+            audio.pause();
+            localStorage.setItem('qgms_audio_enabled', 'false');
+            updateUI(false);
+        }
+
+        // Manual button click toggles audio
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (audio.paused) {
+                playMusic();
+            } else {
+                pauseMusic();
+            }
+        });
+
+        // Autoplay if user previously enabled it and not on intro page
+        if (isEnabled && !isIntroPage) {
+            const promise = audio.play();
+            if (promise !== undefined) {
+                promise.then(function() {
+                    updateUI(true);
+                }).catch(function() {
+                    // Browser policy prevented autoplay before interaction: trigger on first user click
+                    const firstClickUnlock = function() {
+                        if (localStorage.getItem('qgms_audio_enabled') === 'true') {
+                            audio.play().then(function() {
+                                updateUI(true);
+                            });
+                        }
+                        document.removeEventListener('click', firstClickUnlock);
+                    };
+                    document.addEventListener('click', firstClickUnlock, { once: true });
+                });
+            }
+        } else {
+            updateUI(false);
+        }
+    })();
     </script>
 </body>
 </html>

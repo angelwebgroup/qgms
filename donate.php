@@ -29,11 +29,24 @@ if ($wishId > 0) {
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- Header Banner -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg, #831843 0%, #be185d 50%, #e11d48 100%);">
-    <div class="container text-center">
-        <h1 class="display-4 font-weight-bold mb-2">Empower Kindness Today</h1>
-        <p class="lead" style="color: #fce7f3; font-size: 16px;">100% of your gift card donation directly benefits children in urgent need.</p>
+<!-- Hero Banner: Empower Kindness Today -->
+<section class="page-hero-wrapper text-center">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="container page-hero-content">
+        <div class="hero-tag-badge">
+            <i class="fa fa-heart"></i> Gift Cards for Giving
+        </div>
+        <h1 class="page-hero-title">
+            EMPOWER <span class="hero-highlight-text">KINDNESS TODAY</span>
+        </h1>
+        <p class="page-hero-subtitle">
+            100% of your gift card contributions directly benefit children, families, and community partners in urgent need.
+        </p>
+        <div class="hero-breadcrumb">
+            <a href="index.php"><i class="fa fa-home"></i> Home</a>
+            <span>&bull;</span>
+            <span class="text-white">Donate &bull; Giving Cards</span>
+        </div>
     </div>
 </section>
 

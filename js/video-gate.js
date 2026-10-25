@@ -76,6 +76,15 @@
     function onPlayerStateChange(event) {
         // Playing
         if (event.data === window.YT.PlayerState.PLAYING) {
+            // Pause background music so it doesn't conflict with video audio
+            const bgAudio = document.getElementById('bg-music-player');
+            if (bgAudio && !bgAudio.paused) {
+                bgAudio.pause();
+                const soundBtn = document.getElementById('sound-toggle');
+                const soundIcon = document.getElementById('sound-toggle-icon');
+                if (soundBtn) soundBtn.classList.remove('playing');
+                if (soundIcon) soundIcon.className = 'fa fa-volume-off';
+            }
             startTracking();
         } else {
             stopTracking();

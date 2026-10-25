@@ -16,10 +16,24 @@ $currentPage = "terms";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<section class="py-5 text-white" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);">
-    <div class="container text-center">
-        <h1 class="display-4 font-weight-bold mb-2">Terms &amp; Conditions</h1>
-        <p class="lead" style="color: #cbd5e1; font-size: 16px;">Guidelines and mutual agreements governing your use of QGMS platforms.</p>
+<!-- Hero Banner: Terms & Conditions -->
+<section class="page-hero-wrapper text-center">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="container page-hero-content">
+        <div class="hero-tag-badge">
+            <i class="fa fa-file-text-o"></i> Governance &bull; Transparency
+        </div>
+        <h1 class="page-hero-title">
+            TERMS &amp; <span class="hero-highlight-text">CONDITIONS</span>
+        </h1>
+        <p class="page-hero-subtitle">
+            Guidelines, rights, and mutual agreements governing your use of Inspiring Kindness Foundation and QGMS platforms.
+        </p>
+        <div class="hero-breadcrumb">
+            <a href="index.php"><i class="fa fa-home"></i> Home</a>
+            <span>&bull;</span>
+            <span class="text-white">Terms &amp; Conditions</span>
+        </div>
     </div>
 </section>
 

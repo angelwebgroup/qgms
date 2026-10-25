@@ -17,11 +17,24 @@ $currentPage = "why-us";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- Header Banner -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%);">
-    <div class="container text-center">
-        <h1 class="display-4 font-weight-bold mb-2">Why Kindness Matters</h1>
-        <p class="lead" style="color: #cbd5e1; font-size: 16px;">The physiological, emotional, and societal imperative for proactive compassion.</p>
+<!-- Hero Banner: Why Kindness Matters -->
+<section class="page-hero-wrapper text-center">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="container page-hero-content">
+        <div class="hero-tag-badge">
+            <i class="fa fa-heartbeat"></i> The Power of Compassion
+        </div>
+        <h1 class="page-hero-title">
+            WHY <span class="hero-highlight-text">KINDNESS MATTERS</span>
+        </h1>
+        <p class="page-hero-subtitle">
+            The physiological, emotional, and societal imperative for proactive compassion &mdash; discovering why kindness is scientifically proven to heal and connect us.
+        </p>
+        <div class="hero-breadcrumb">
+            <a href="index.php"><i class="fa fa-home"></i> Home</a>
+            <span>&bull;</span>
+            <span class="text-white">Why Us?</span>
+        </div>
     </div>
 </section>
 
