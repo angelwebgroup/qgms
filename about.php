@@ -30,9 +30,9 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-pink); font-size: 12px;">Who We Are</span>
+                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-brand); font-size: 12px;">Who We Are</span>
                 <h2 class="font-weight-bold mb-4" style="color: #0f172a; font-size: 34px;">
-                    Know About <span style="color: var(--primary-pink);">Inspiring Kindness</span>
+                    Know About <span style="color: var(--primary-brand);">Inspiring Kindness</span>
                 </h2>
                 <p style="font-size: 15px; line-height: 1.8; color: #475569;">
                     At Inspiring Kindness, we believe that the smallest act of care can start a ripple strong enough to change the world. Our mission is simple &mdash; to inspire people everywhere to recognize, reward, and share kindness in ways that create lasting emotional and social impact.
@@ -54,9 +54,9 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Vision and Mission -->
         <div class="row pt-4">
             <div class="col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm p-4" style="border-radius: 20px; border-top: 5px solid var(--primary-pink);">
+                <div class="card h-100 border-0 shadow-sm p-4" style="border-radius: 20px; border-top: 5px solid var(--primary-brand);">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="mr-3 p-3 rounded-circle" style="background: rgba(228, 0, 124, 0.1); color: var(--primary-pink); font-size: 24px;">
+                        <div class="mr-3 p-3 rounded-circle" style="background: rgba(0, 154, 209, 0.1); color: var(--primary-brand); font-size: 24px;">
                             <i class="fa fa-eye"></i>
                         </div>
                         <h3 class="font-weight-bold mb-0" style="color: #0f172a;">Our Vision</h3>
@@ -97,7 +97,7 @@ require_once __DIR__ . '/includes/header.php';
             <h2 class="font-weight-bold" style="font-size: 34px;">
                 The Methodology: Catch, Recognize, Reward, Inspire
             </h2>
-            <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-pink); margin: 15px auto;"></div>
+            <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-brand); margin: 15px auto;"></div>
         </div>
 
         <div class="row align-items-center">
@@ -105,7 +105,7 @@ require_once __DIR__ . '/includes/header.php';
                 <p style="font-size: 15px; line-height: 1.8; color: #334155;">
                     The Inspiring Kindness methodology is an innovative framework combining behavioral economics, modern gamification, and digital validation to incentivize and multiply acts of service.
                 </p>
-                <div class="p-3 mb-3 bg-white rounded-lg shadow-sm" style="border-left: 4px solid var(--primary-pink);">
+                <div class="p-3 mb-3 bg-white rounded-lg shadow-sm" style="border-left: 4px solid var(--primary-brand);">
                     <h5 class="font-weight-bold mb-1">1. Catch</h5>
                     <p class="text-muted mb-0" style="font-size: 13.5px;">Observing genuine gestures of benevolence in schools, neighborhoods, and workplaces.</p>
                 </div>

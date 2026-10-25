@@ -1,6 +1,13 @@
 /**
- * QGMS - Video Gatekeeper Script
- * Implements YouTube IFrame API with anti-tamper progress tracking & unlocking
+ * QGMS - Video Gatekeeper & Auto-Registration Script
+ * 
+ * 1. Implements YouTube IFrame API with anti-tamper playback tracking.
+ * 2. On video completion:
+ *    - Unlocks website access via api/unlock-access.php
+ *    - Fires celebration confetti
+ *    - Automatically opens the modern Registration Form Modal
+ * 3. User can skip registration anytime via close ('✕') / cors button or skip link.
+ * 4. Fully styled with Logo Azure Blue & Violet branding.
  */
 
 (function () {
@@ -19,7 +26,8 @@
         csrfToken: '',
         unlockApiUrl: 'api/unlock-access.php',
         heartbeatApiUrl: 'api/video-heartbeat.php',
-        redirectUrl: 'index.php'
+        redirectUrl: 'index.php',
+        alreadyUnlocked: false
     };
 
     // Load YouTube API
@@ -123,12 +131,12 @@
         const percent = duration > 0 ? Math.min(100, Math.floor((maxWatchedTime / duration) * 100)) : 0;
         
         const badgeText = document.getElementById('watch-percent');
-        if (badgeText) {
+        if (badgeText && !isUnlocked) {
             badgeText.textContent = percent + '% Watched';
         }
 
         const progressBar = document.getElementById('watch-progress-fill');
-        if (progressBar) {
+        if (progressBar && !isUnlocked) {
             progressBar.style.width = percent + '%';
         }
     }
@@ -158,20 +166,20 @@
         const badgeText = document.getElementById('watch-percent');
         if (badgeText) {
             badgeText.textContent = '100% Completed!';
-            badgeText.style.background = '#10b981';
+            badgeText.style.background = '#009ad1';
         }
 
         const progressBar = document.getElementById('watch-progress-fill');
         if (progressBar) {
             progressBar.style.width = '100%';
-            progressBar.style.background = '#10b981';
+            progressBar.style.background = 'linear-gradient(90deg, #009ad1, #7e2b90)';
         }
 
         // Notify Server to unlock session and issue secure signed token
         const payload = {
             csrf_token: config.csrfToken,
             video_id: config.videoId,
-            watched_seconds: Math.floor(maxWatchedTime),
+            watched_seconds: Math.floor(maxWatchedTime || duration || 60),
             duration: duration,
             completed: true
         };
@@ -184,24 +192,26 @@
         .then(function (res) { return res.json(); })
         .then(function (data) {
             if (data.success) {
-                triggerUnlockUI(data.redirect || config.redirectUrl);
+                triggerUnlockUI();
+                openRegistrationModal();
             } else {
-                alert(data.error || 'Verification failed. Please complete the video.');
+                alert(data.error || 'Verification error. Please complete the video.');
                 isUnlocked = false;
             }
         })
         .catch(function (err) {
             console.error('Unlock error:', err);
             // Fallback unlock UI
-            triggerUnlockUI(config.redirectUrl);
+            triggerUnlockUI();
+            openRegistrationModal();
         });
     }
 
-    function triggerUnlockUI(redirectUrl) {
+    function triggerUnlockUI() {
         // Change title
         const gateTitle = document.getElementById('gate-action-title');
         if (gateTitle) {
-            gateTitle.innerHTML = '🎉 Access Unlocked! Download Now';
+            gateTitle.innerHTML = '🎉 Access Unlocked! Download Now or Enter Below';
             gateTitle.classList.remove('locked');
             gateTitle.classList.add('unlocked');
         }
@@ -217,31 +227,164 @@
             androidBtn.classList.remove('disabled');
         }
 
-        // Reveal Enter Website Button
+        // Reveal Enter Website Container
         const enterContainer = document.getElementById('enter-website-container');
         if (enterContainer) {
             enterContainer.style.display = 'block';
-            enterContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
-        // Launch celebrate confetti if canvas exists
+        // Launch celebratory confetti
         if (window.confetti) {
             window.confetti({
-                particleCount: 100,
-                spread: 70,
+                particleCount: 120,
+                spread: 75,
                 origin: { y: 0.6 }
             });
         }
     }
 
-    // Initialize when DOM is ready
+    // Opens the Registration Form Modal
+    function openRegistrationModal() {
+        const modal = document.getElementById('reg-auto-modal-overlay');
+        if (modal) {
+            setTimeout(function () {
+                modal.classList.add('active');
+                const firstInput = modal.querySelector('input[name="full_name"]');
+                if (firstInput) {
+                    firstInput.focus();
+                }
+            }, 600);
+        }
+    }
+
+    function closeRegistrationModalAndEnterWebsite() {
+        const modal = document.getElementById('reg-auto-modal-overlay');
+        if (modal) {
+            modal.classList.remove('active');
+        }
+        // Navigate user straight to the activated website
+        window.location.href = config.redirectUrl || 'index.php';
+    }
+
+    // Setup interactive events
     document.addEventListener('DOMContentLoaded', function () {
         loadYouTubeApi();
 
-        // Attach modal triggers for Download buttons
+        // Close / Cross (Cors) Button in Registration Modal -> Skips and enters website
+        const closeRegBtn = document.getElementById('btn-close-reg-modal');
+        if (closeRegBtn) {
+            closeRegBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                closeRegistrationModalAndEnterWebsite();
+            });
+        }
+
+        // Skip Link in Registration Modal -> Skips and enters website
+        const skipRegBtn = document.getElementById('btn-skip-intro-reg');
+        if (skipRegBtn) {
+            skipRegBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                closeRegistrationModalAndEnterWebsite();
+            });
+        }
+
+        // Re-open registration button (for already unlocked users)
+        const reopenBtn = document.getElementById('btn-reopen-reg');
+        if (reopenBtn) {
+            reopenBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const modal = document.getElementById('reg-auto-modal-overlay');
+                if (modal) {
+                    modal.classList.add('active');
+                }
+            });
+        }
+
+        // Category pills selector
+        const pills = document.querySelectorAll('#modal-category-pills .reg-pill');
+        const catInput = document.getElementById('modal-category-input');
+        pills.forEach(function (pill) {
+            pill.addEventListener('click', function () {
+                pills.forEach(function (p) { p.classList.remove('active'); });
+                this.classList.add('active');
+                if (catInput) {
+                    catInput.value = this.getAttribute('data-category') || 'kindness_ambassador';
+                }
+            });
+        });
+
+        // Registration form AJAX submission
+        const regForm = document.getElementById('intro-reg-form');
+        if (regForm) {
+            regForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const form = this;
+                const submitBtn = document.getElementById('btn-submit-intro-reg');
+                const alertBox = document.getElementById('intro-reg-alert');
+                const formData = new FormData(form);
+
+                const fullName = form.querySelector('[name="full_name"]').value.trim();
+                const email = form.querySelector('[name="email"]').value.trim();
+                const phone = form.querySelector('[name="phone"]').value.trim();
+
+                if (!fullName || !email || !phone) {
+                    alertBox.style.display = 'block';
+                    alertBox.className = 'alert alert-danger';
+                    alertBox.textContent = 'Please fill in your name, email, and phone number.';
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                const originalHtml = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Submitting Registration...';
+
+                fetch('api/register.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    if (data.success) {
+                        document.getElementById('reg-form-content').style.display = 'none';
+                        const successDiv = document.getElementById('reg-form-success');
+                        successDiv.style.display = 'block';
+
+                        if (window.confetti) {
+                            window.confetti({ particleCount: 100, spread: 80, origin: { y: 0.5 } });
+                        }
+
+                        let countdown = 3;
+                        const cdElem = document.getElementById('reg-countdown');
+                        const cdInterval = setInterval(function () {
+                            countdown--;
+                            if (cdElem) cdElem.textContent = countdown;
+                            if (countdown <= 0) {
+                                clearInterval(cdInterval);
+                                window.location.href = config.redirectUrl || 'index.php';
+                            }
+                        }, 1000);
+                    } else {
+                        alertBox.style.display = 'block';
+                        alertBox.className = 'alert alert-danger';
+                        alertBox.textContent = data.error || 'Registration failed. Please check your details.';
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalHtml;
+                    }
+                })
+                .catch(function (err) {
+                    alertBox.style.display = 'block';
+                    alertBox.className = 'alert alert-danger';
+                    alertBox.textContent = 'Connection error. Please try again.';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalHtml;
+                });
+            });
+        }
+
+        // App download triggers (Coming soon modal)
         const downloadBtns = document.querySelectorAll('.trigger-app-modal');
-        const modalOverlay = document.getElementById('app-download-modal');
-        const modalClose = document.getElementById('close-app-modal');
+        const appModal = document.getElementById('app-download-modal');
+        const closeAppModal = document.getElementById('close-app-modal');
 
         downloadBtns.forEach(function (btn) {
             btn.addEventListener('click', function (e) {
@@ -250,19 +393,19 @@
                     return;
                 }
                 e.preventDefault();
-                if (modalOverlay) {
-                    modalOverlay.classList.add('active');
+                if (appModal) {
+                    appModal.classList.add('active');
                 }
             });
         });
 
-        if (modalClose && modalOverlay) {
-            modalClose.addEventListener('click', function () {
-                modalOverlay.classList.remove('active');
+        if (closeAppModal && appModal) {
+            closeAppModal.addEventListener('click', function () {
+                appModal.classList.remove('active');
             });
-            modalOverlay.addEventListener('click', function (e) {
-                if (e.target === modalOverlay) {
-                    modalOverlay.classList.remove('active');
+            appModal.addEventListener('click', function (e) {
+                if (e.target === appModal) {
+                    appModal.classList.remove('active');
                 }
             });
         }

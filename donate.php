@@ -59,10 +59,10 @@ require_once __DIR__ . '/includes/header.php';
 
                     <!-- Preset Amount Buttons -->
                     <div class="d-flex flex-wrap justify-content-center gap-3 mb-4" id="preset-amounts">
-                        <button type="button" class="btn btn-outline-danger font-weight-bold px-4 py-3 mr-2 mb-2 amount-btn" data-amt="25" style="border-radius: 12px; font-size: 18px;">$25</button>
-                        <button type="button" class="btn btn-danger font-weight-bold px-4 py-3 mr-2 mb-2 amount-btn active" data-amt="50" style="border-radius: 12px; font-size: 18px; background: var(--primary-pink); border-color: var(--primary-pink);">$50</button>
-                        <button type="button" class="btn btn-outline-danger font-weight-bold px-4 py-3 mr-2 mb-2 amount-btn" data-amt="100" style="border-radius: 12px; font-size: 18px;">$100</button>
-                        <button type="button" class="btn btn-outline-danger font-weight-bold px-4 py-3 mr-2 mb-2 amount-btn" data-amt="250" style="border-radius: 12px; font-size: 18px;">$250</button>
+                        <button type="button" class="btn btn-outline-primary font-weight-bold px-4 py-3 mr-2 mb-2 amount-btn" data-amt="25" style="border-radius: 12px; font-size: 18px; border-color: var(--primary-brand); color: var(--primary-brand);">$25</button>
+                        <button type="button" class="btn btn-primary font-weight-bold px-4 py-3 mr-2 mb-2 amount-btn active" data-amt="50" style="border-radius: 12px; font-size: 18px; background: var(--primary-brand); border-color: var(--primary-brand); color: #fff;">$50</button>
+                        <button type="button" class="btn btn-outline-primary font-weight-bold px-4 py-3 mr-2 mb-2 amount-btn" data-amt="100" style="border-radius: 12px; font-size: 18px; border-color: var(--primary-brand); color: var(--primary-brand);">$100</button>
+                        <button type="button" class="btn btn-outline-primary font-weight-bold px-4 py-3 mr-2 mb-2 amount-btn" data-amt="250" style="border-radius: 12px; font-size: 18px; border-color: var(--primary-brand); color: var(--primary-brand);">$250</button>
                     </div>
 
                     <form id="donation-demo-form">
@@ -116,13 +116,15 @@ require_once __DIR__ . '/includes/header.php';
 document.querySelectorAll('.amount-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         document.querySelectorAll('.amount-btn').forEach(b => {
-            b.classList.remove('active', 'btn-danger');
-            b.classList.add('btn-outline-danger');
+            b.classList.remove('active', 'btn-primary');
+            b.classList.add('btn-outline-primary');
             b.style.background = 'transparent';
+            b.style.color = 'var(--primary-brand)';
         });
-        this.classList.add('active', 'btn-danger');
-        this.classList.remove('btn-outline-danger');
-        this.style.background = 'var(--primary-pink)';
+        this.classList.add('active', 'btn-primary');
+        this.classList.remove('btn-outline-primary');
+        this.style.background = 'var(--primary-brand)';
+        this.style.color = '#fff';
 
         const val = this.getAttribute('data-amt');
         document.getElementById('donation-amount-input').value = val;
@@ -133,9 +135,10 @@ document.querySelectorAll('.amount-btn').forEach(btn => {
 document.getElementById('custom-amount-field')?.addEventListener('input', function() {
     if (this.value) {
         document.querySelectorAll('.amount-btn').forEach(b => {
-            b.classList.remove('active', 'btn-danger');
-            b.classList.add('btn-outline-danger');
+            b.classList.remove('active', 'btn-primary');
+            b.classList.add('btn-outline-primary');
             b.style.background = 'transparent';
+            b.style.color = 'var(--primary-brand)';
         });
         document.getElementById('donation-amount-input').value = this.value;
     }

@@ -30,7 +30,7 @@ require_once __DIR__ . '/includes/header.php';
             <div class="col-lg-5 col-md-8">
                 <div class="card border-0 shadow-lg rounded-2xl p-4 p-md-5" style="border-radius: 24px;">
                     <div class="text-center mb-4">
-                        <div class="mx-auto mb-3" style="width: 60px; height: 60px; border-radius: 50%; background: rgba(228, 0, 124, 0.1); color: var(--primary-pink); display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                        <div class="mx-auto mb-3" style="width: 60px; height: 60px; border-radius: 50%; background: rgba(0, 154, 209, 0.1); color: var(--primary-brand); display: flex; align-items: center; justify-content: center; font-size: 24px;">
                             <i class="fa fa-lock"></i>
                         </div>
                         <h2 class="font-weight-bold" style="color: #0f172a;">Account Login</h2>
@@ -58,7 +58,7 @@ require_once __DIR__ . '/includes/header.php';
                     </form>
 
                     <div class="text-center mt-4 pt-3 border-top">
-                        <p class="text-muted mb-0" style="font-size: 13.5px;">Don't have an account? <a href="register.php" style="color: var(--primary-pink); font-weight: 700;">Create Account</a></p>
+                        <p class="text-muted mb-0" style="font-size: 13.5px;">Don't have an account? <a href="register.php" style="color: var(--primary-brand); font-weight: 700;">Create Account</a></p>
                     </div>
                 </div>
             </div>

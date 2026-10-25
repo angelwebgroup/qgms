@@ -47,7 +47,7 @@ require_once __DIR__ . '/includes/header.php';
 
         <h3 class="font-weight-bold mb-3 mt-4">5. Contact Information</h3>
         <p>
-            If you have questions regarding this Privacy Policy, please contact our administrative team at <a href="mailto:<?= SITE_EMAIL ?>" class="font-weight-bold" style="color: var(--primary-pink);"><?= SITE_EMAIL ?></a> or by telephone at <?= SITE_PHONE ?>.
+            If you have questions regarding this Privacy Policy, please contact our administrative team at <a href="mailto:<?= SITE_EMAIL ?>" class="font-weight-bold" style="color: var(--primary-brand);"><?= SITE_EMAIL ?></a> or by telephone at <?= SITE_PHONE ?>.
         </p>
     </div>
 </section>

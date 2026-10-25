@@ -30,9 +30,9 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-pink); font-size: 12px;">Scientific Foundations</span>
+                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-brand); font-size: 12px;">Scientific Foundations</span>
                 <h2 class="font-weight-bold mb-3" style="color: #0f172a; font-size: 34px;">
-                    Kindness is Not Just Good &mdash; <span style="color: var(--primary-pink);">It's Medicine</span>
+                    Kindness is Not Just Good &mdash; <span style="color: var(--primary-brand);">It's Medicine</span>
                 </h2>
                 <p style="font-size: 15px; line-height: 1.8; color: #475569;">
                     Even in a world more connected than ever, millions of people feel divided, unseen, and emotionally burned out. Science confirms what our hearts already know &mdash; that acts of kindness don't just help others; they heal, connect, and inspire us all.
@@ -64,7 +64,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100 border-0 shadow-sm p-4 text-center" style="border-radius: 20px;">
-                    <div class="mx-auto mb-3 p-3 rounded-circle" style="background: #fdf2f8; color: var(--primary-pink); width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 26px;">
+                    <div class="mx-auto mb-3 p-3 rounded-circle" style="background: #f0f9ff; color: var(--primary-brand); width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 26px;">
                         <i class="fa fa-users"></i>
                     </div>
                     <h4 class="font-weight-bold mb-3">Social Bonding</h4>

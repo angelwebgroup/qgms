@@ -21,7 +21,7 @@ require_once __DIR__ . '/includes/header.php';
 <section class="kindness-hero position-relative text-white overflow-hidden" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%); padding: 100px 0 90px;">
     <div class="position-absolute w-100 h-100" style="top: 0; left: 0; opacity: 0.15; background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 24px 24px;"></div>
     <div class="container position-relative z-1 text-center">
-        <div class="badge px-4 py-2 mb-3 text-uppercase font-weight-bold" style="background: rgba(228, 0, 124, 0.25); color: #f472b6; border: 1px solid rgba(228, 0, 124, 0.4); border-radius: 30px; letter-spacing: 1.5px; font-size: 13px;">
+        <div class="badge px-4 py-2 mb-3 text-uppercase font-weight-bold" style="background: rgba(0, 154, 209, 0.25); color: #38bdf8; border: 1px solid rgba(0, 154, 209, 0.4); border-radius: 30px; letter-spacing: 1.5px; font-size: 13px;">
             Recognizing Everyday Compassion
         </div>
         <h1 class="display-3 font-weight-bolder mb-3" style="font-family: 'Outfit', sans-serif; letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">
@@ -47,9 +47,9 @@ require_once __DIR__ . '/includes/header.php';
             <div class="col-lg-12">
                 <div class="default-title text-center mb-5">
                     <h2 class="font-weight-bold text-dark" style="font-size: 34px;">
-                        TURNING GREATNESS INTO <span style="color: var(--primary-pink);">INSPIRATION</span>
+                        TURNING GREATNESS INTO <span style="color: var(--primary-brand);">INSPIRATION</span>
                     </h2>
-                    <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-pink); margin: 15px auto;"></div>
+                    <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-brand); margin: 15px auto;"></div>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="register.php" class="btn btn-default join-btn" style="background-color: var(--primary-pink); color: white; border-color: var(--primary-pink); border-radius: 50px; text-transform: uppercase; padding: 14px 40px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 8px 25px var(--glow-pink);">
+                    <a href="register.php" class="btn btn-default join-btn" style="background-color: var(--primary-brand); color: white; border-color: var(--primary-brand); border-radius: 50px; text-transform: uppercase; padding: 14px 40px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 8px 25px var(--glow-brand);">
                         REGISTER NOW
                     </a>
                 </div>
@@ -78,9 +78,9 @@ require_once __DIR__ . '/includes/header.php';
             <div class="col-lg-12">
                 <div class="default-title text-center mb-5">
                     <h2 class="font-weight-bold" style="font-size: 34px;">
-                        INSPIRING <span style="color: var(--primary-pink);">STORIES</span>
+                        INSPIRING <span style="color: var(--primary-brand);">STORIES</span>
                     </h2>
-                    <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-pink); margin: 15px auto;"></div>
+                    <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-brand); margin: 15px auto;"></div>
                     <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Real stories of people stepping up and creating positive change in their communities.</p>
                 </div>
             </div>
@@ -120,9 +120,9 @@ require_once __DIR__ . '/includes/header.php';
             <div class="col-lg-6">
                 <div class="default-title text-center mb-5">
                     <h2 class="font-weight-bold" style="font-size: 34px;">
-                        ❤️ HOW <span style="color: var(--primary-pink);">IT WORKS</span>
+                        ❤️ HOW <span style="color: var(--primary-brand);">IT WORKS</span>
                     </h2>
-                    <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-pink); margin: 15px auto;"></div>
+                    <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-brand); margin: 15px auto;"></div>
                 </div>
             </div>
         </div>
@@ -135,7 +135,7 @@ require_once __DIR__ . '/includes/header.php';
                         <img src="images/about/b1.jpg" alt="Catch Kindness" class="w-100 h-100" style="object-fit: cover;">
                     </div>
                     <div class="card-body p-4 text-center">
-                        <div class="badge badge-pill badge-primary mb-3 px-3 py-2" style="background: var(--primary-pink); font-size: 13px;">STEP 1</div>
+                        <div class="badge badge-pill badge-primary mb-3 px-3 py-2" style="background: var(--primary-brand); font-size: 13px;">STEP 1</div>
                         <h4 class="font-weight-bold mb-3" style="color: #0f172a;">Catch Kindness</h4>
                         <p class="text-muted" style="font-size: 14.5px; line-height: 1.7;">
                             See someone doing good? Capture it in a photo or short video. Share the story &mdash; big or small, every gesture matters.
@@ -151,7 +151,7 @@ require_once __DIR__ . '/includes/header.php';
                         <img src="images/about/b2.jpg" alt="Recognize and Reward" class="w-100 h-100" style="object-fit: cover;">
                     </div>
                     <div class="card-body p-4 text-center">
-                        <div class="badge badge-pill badge-primary mb-3 px-3 py-2" style="background: var(--primary-pink); font-size: 13px;">STEP 2</div>
+                        <div class="badge badge-pill badge-primary mb-3 px-3 py-2" style="background: var(--primary-brand); font-size: 13px;">STEP 2</div>
                         <h4 class="font-weight-bold mb-3" style="color: #0f172a;">Recognize &amp; Reward</h4>
                         <p class="text-muted" style="font-size: 14.5px; line-height: 1.7;">
                             Each act of kindness earns a Gift Card for Giving &mdash; a reward that allows the recipient to help someone else in need, at no cost.
@@ -167,7 +167,7 @@ require_once __DIR__ . '/includes/header.php';
                         <img src="images/about/b3.webp" alt="Watch the Ripple Grow" class="w-100 h-100" style="object-fit: cover;">
                     </div>
                     <div class="card-body p-4 text-center">
-                        <div class="badge badge-pill badge-primary mb-3 px-3 py-2" style="background: var(--primary-pink); font-size: 13px;">STEP 3</div>
+                        <div class="badge badge-pill badge-primary mb-3 px-3 py-2" style="background: var(--primary-brand); font-size: 13px;">STEP 3</div>
                         <h4 class="font-weight-bold mb-3" style="color: #0f172a;">Watch the Ripple Grow</h4>
                         <p class="text-muted" style="font-size: 14.5px; line-height: 1.7;">
                             See the kindness ripple expand across the world in our live interactive map and feel the transformative power of genuine care.
@@ -185,7 +185,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="row align-items-center mb-5">
             <div class="col-lg-7">
                 <h1 class="font-weight-bolder mb-3" style="font-size: 38px; color: #0f172a;">
-                    Welcome to <span style="color: var(--primary-pink);">Inspiring Kindness</span>
+                    Welcome to <span style="color: var(--primary-brand);">Inspiring Kindness</span>
                 </h1>
                 <p class="lead font-weight-bold mb-4" style="color: #475569;">Help spread kindness in your community.</p>
                 <p style="font-size: 15px; line-height: 1.8; color: #334155;">
@@ -204,7 +204,7 @@ require_once __DIR__ . '/includes/header.php';
 
         <div class="row">
             <div class="col-md-6 mb-4">
-                <div class="p-4 bg-white rounded-xl shadow-sm h-100" style="border-radius: 16px; border-left: 5px solid var(--primary-pink);">
+                <div class="p-4 bg-white rounded-xl shadow-sm h-100" style="border-radius: 16px; border-left: 5px solid var(--primary-brand);">
                     <h3 class="font-weight-bold mb-3" style="color: #0f172a;">Our Vision</h3>
                     <p style="font-size: 14.5px; line-height: 1.8; color: #475569;">
                         We envision a world where kindness is not random, but recognized &mdash; where caring for others is a natural part of everyday life and the driving force of social change. A world where compassion is valued as a strength, not a sentiment, and where the attention we give is directed toward people and actions that truly make a difference.
@@ -228,9 +228,9 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="font-weight-bold" style="font-size: 34px;">
-                💖 WHY IT <span style="color: var(--primary-pink);">MATTERS</span>
+                💖 WHY IT <span style="color: var(--primary-brand);">MATTERS</span>
             </h2>
-            <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-pink); margin: 15px auto;"></div>
+            <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-brand); margin: 15px auto;"></div>
             <p class="text-muted" style="max-width: 650px; margin: 0 auto;">Science confirms what our hearts already know: kindness heals, connects, and inspires us all.</p>
         </div>
 
@@ -308,7 +308,7 @@ require_once __DIR__ . '/includes/header.php';
             <h2 class="font-weight-bold" style="font-size: 32px;">
                 The Inspiring Kindness Methodology as a Tool
             </h2>
-            <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-pink); margin: 15px auto;"></div>
+            <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-brand); margin: 15px auto;"></div>
         </div>
 
         <div class="row align-items-center">
@@ -335,7 +335,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="row align-items-center">
             <div class="col-lg-7 mb-4 mb-lg-0">
                 <h2 class="font-weight-bold mb-3" style="font-size: 32px;">
-                    The Gift Card <span style="color: var(--primary-pink);">for Giving</span>
+                    The Gift Card <span style="color: var(--primary-brand);">for Giving</span>
                 </h2>
                 <p style="font-size: 15px; line-height: 1.8; color: #334155;">
                     Our <strong>Gift Card for Giving</strong> may be the best gift anyone can receive. It is awarded in recognition of an act of kindness and enables the recipient to do even more good by helping a specifically defined underprivileged child &mdash; at no cost to them.
@@ -360,30 +360,30 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="font-weight-bold" style="font-size: 34px;">
-                GET IN <span style="color: var(--primary-pink);">TOUCH</span>
+                GET IN <span style="color: var(--primary-brand);">TOUCH</span>
             </h2>
-            <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-pink); margin: 15px auto;"></div>
+            <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-brand); margin: 15px auto;"></div>
             <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Connect with Henrik and the Inspiring Kindness Foundation team.</p>
         </div>
 
         <div class="row mb-5">
             <div class="col-md-4 mb-3">
                 <div class="p-4 bg-light rounded-xl text-center h-100" style="border-radius: 16px;">
-                    <i class="fa fa-map-marker" style="font-size: 32px; color: var(--primary-pink);"></i>
+                    <i class="fa fa-map-marker" style="font-size: 32px; color: var(--primary-brand);"></i>
                     <h5 class="font-weight-bold mt-3 mb-1">Our Location</h5>
                     <p class="text-muted mb-0" style="font-size: 14px;"><?= SITE_ADDRESS ?></p>
                 </div>
             </div>
             <div class="col-md-4 mb-3">
                 <div class="p-4 bg-light rounded-xl text-center h-100" style="border-radius: 16px;">
-                    <i class="fa fa-envelope" style="font-size: 32px; color: var(--primary-pink);"></i>
+                    <i class="fa fa-envelope" style="font-size: 32px; color: var(--primary-brand);"></i>
                     <h5 class="font-weight-bold mt-3 mb-1">Email Us</h5>
                     <p class="text-muted mb-0" style="font-size: 14px;"><a href="mailto:<?= SITE_EMAIL ?>" class="text-muted"><?= SITE_EMAIL ?></a></p>
                 </div>
             </div>
             <div class="col-md-4 mb-3">
                 <div class="p-4 bg-light rounded-xl text-center h-100" style="border-radius: 16px;">
-                    <i class="fa fa-phone" style="font-size: 32px; color: var(--primary-pink);"></i>
+                    <i class="fa fa-phone" style="font-size: 32px; color: var(--primary-brand);"></i>
                     <h5 class="font-weight-bold mt-3 mb-1">Call Us</h5>
                     <p class="text-muted mb-0" style="font-size: 14px;"><a href="tel:<?= str_replace([' ', '.'], '', SITE_PHONE) ?>" class="text-muted"><?= SITE_PHONE ?></a></p>
                 </div>

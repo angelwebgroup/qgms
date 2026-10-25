@@ -36,7 +36,7 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
             </div>
             <div class="col-lg-7">
-                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-pink); font-size: 12px;">Founder &amp; Chief Visionary</span>
+                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-brand); font-size: 12px;">Founder &amp; Chief Visionary</span>
                 <h2 class="font-weight-bold mb-2" style="color: #0f172a; font-size: 34px;">Henrik</h2>
                 <p class="text-muted font-italic mb-3" style="font-size: 15px;">Quality Giving Management &bull; Inspiring Kindness Foundation</p>
                 

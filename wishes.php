@@ -64,7 +64,7 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="card h-100 border-0 shadow-sm" style="border-radius: 20px; overflow: hidden; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
                             <div style="height: 220px; overflow: hidden; position: relative;">
                                 <img src="<?= htmlspecialchars($wish['image_url'] ?? 'images/courses/k1.jpeg') ?>" alt="<?= htmlspecialchars($wish['title']) ?>" class="w-100 h-100" style="object-fit: cover;">
-                                <span class="badge badge-pill badge-primary position-absolute" style="top: 15px; left: 15px; background: var(--primary-pink); padding: 8px 16px; font-size: 12px; font-weight: 700;">
+                                <span class="badge badge-pill badge-primary position-absolute" style="top: 15px; left: 15px; background: var(--primary-brand); padding: 8px 16px; font-size: 12px; font-weight: 700;">
                                     <?= htmlspecialchars($wish['category']) ?>
                                 </span>
                             </div>
@@ -83,7 +83,7 @@ require_once __DIR__ . '/includes/header.php';
                                         <span class="text-muted">Goal: $<?= number_format((float)$wish['amount_needed'], 2) ?></span>
                                     </div>
                                     <div class="progress mb-3" style="height: 8px; border-radius: 10px; background: #e2e8f0;">
-                                        <div class="progress-bar" role="progressbar" style="width: <?= $percent ?>%; background: var(--primary-pink); border-radius: 10px;" aria-valuenow="<?= $percent ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: <?= $percent ?>%; background: linear-gradient(90deg, #009ad1, #7e2b90); border-radius: 10px;" aria-valuenow="<?= $percent ?>" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <a href="donate.php?wish_id=<?= $wish['id'] ?>" class="btn btn-donate w-100" style="border-radius: 12px; font-size: 14px;">
                                         Fulfill / Support This Wish

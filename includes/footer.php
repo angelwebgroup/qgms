@@ -52,7 +52,7 @@
                             <div class="input-group mb-2">
                                 <input type="email" name="email" class="form-control" placeholder="Your Email" required style="border-radius: 4px 0 0 4px; border: none; font-size: 13px;">
                                 <div class="input-group-append">
-                                    <button class="btn btn-primary" type="submit" style="background: var(--primary-pink); border-color: var(--primary-pink); font-size: 13px; font-weight: 700; text-transform: uppercase;">Subscribe</button>
+                                    <button class="btn btn-primary" type="submit" style="background: var(--primary-brand); border-color: var(--primary-brand); font-size: 13px; font-weight: 700; text-transform: uppercase;">Subscribe</button>
                                 </div>
                             </div>
                             <div id="newsletter-msg" style="font-size: 12px; display: none;"></div>
@@ -65,13 +65,13 @@
                     <div class="footer-contact-col">
                         <h4 style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase;">Get In Touch</h4>
                         <p style="font-size: 13.5px; color: #94a3b8; margin-bottom: 8px;">
-                            <i class="fa fa-phone mr-2" style="color: var(--primary-pink);"></i> <?= SITE_PHONE ?>
+                            <i class="fa fa-phone mr-2" style="color: var(--primary-brand);"></i> <?= SITE_PHONE ?>
                         </p>
                         <p style="font-size: 13.5px; color: #94a3b8; margin-bottom: 8px;">
-                            <i class="fa fa-envelope mr-2" style="color: var(--primary-pink);"></i> <?= SITE_EMAIL ?>
+                            <i class="fa fa-envelope mr-2" style="color: var(--primary-brand);"></i> <?= SITE_EMAIL ?>
                         </p>
                         <p style="font-size: 13.5px; color: #94a3b8; margin-bottom: 20px;">
-                            <i class="fa fa-map-marker mr-2" style="color: var(--primary-pink);"></i> <?= SITE_ADDRESS ?>
+                            <i class="fa fa-map-marker mr-2" style="color: var(--primary-brand);"></i> <?= SITE_ADDRESS ?>
                         </p>
 
                         <div class="app-badges d-flex flex-column gap-2" style="gap: 10px;">

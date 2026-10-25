@@ -32,7 +32,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="row mb-5">
             <div class="col-md-4 mb-3">
                 <div class="p-4 bg-light rounded-xl text-center h-100 shadow-sm" style="border-radius: 20px;">
-                    <div class="mx-auto mb-3" style="width: 64px; height: 64px; border-radius: 50%; background: rgba(228, 0, 124, 0.1); color: var(--primary-pink); display: flex; align-items: center; justify-content: center; font-size: 26px;">
+                    <div class="mx-auto mb-3" style="width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 154, 209, 0.1); color: var(--primary-brand); display: flex; align-items: center; justify-content: center; font-size: 26px;">
                         <i class="fa fa-map-marker"></i>
                     </div>
                     <h5 class="font-weight-bold mb-2">Our Office</h5>
@@ -42,7 +42,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <div class="col-md-4 mb-3">
                 <div class="p-4 bg-light rounded-xl text-center h-100 shadow-sm" style="border-radius: 20px;">
-                    <div class="mx-auto mb-3" style="width: 64px; height: 64px; border-radius: 50%; background: rgba(228, 0, 124, 0.1); color: var(--primary-pink); display: flex; align-items: center; justify-content: center; font-size: 26px;">
+                    <div class="mx-auto mb-3" style="width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 154, 209, 0.1); color: var(--primary-brand); display: flex; align-items: center; justify-content: center; font-size: 26px;">
                         <i class="fa fa-envelope"></i>
                     </div>
                     <h5 class="font-weight-bold mb-2">Direct Email</h5>
@@ -52,7 +52,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <div class="col-md-4 mb-3">
                 <div class="p-4 bg-light rounded-xl text-center h-100 shadow-sm" style="border-radius: 20px;">
-                    <div class="mx-auto mb-3" style="width: 64px; height: 64px; border-radius: 50%; background: rgba(228, 0, 124, 0.1); color: var(--primary-pink); display: flex; align-items: center; justify-content: center; font-size: 26px;">
+                    <div class="mx-auto mb-3" style="width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 154, 209, 0.1); color: var(--primary-brand); display: flex; align-items: center; justify-content: center; font-size: 26px;">
                         <i class="fa fa-phone"></i>
                     </div>
                     <h5 class="font-weight-bold mb-2">Phone Inquiries</h5>
