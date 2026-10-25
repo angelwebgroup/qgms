@@ -1,0 +1,451 @@
+/* -------------------------------------------------------------
+   QGMS - Inspiring Kindness Foundation
+   Custom Enhancement Stylesheet
+------------------------------------------------------------- */
+
+:root {
+    --primary-pink: #E4007C;
+    --primary-pink-hover: #c3006a;
+    --dark-bg: #121217;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --glow-pink: rgba(228, 0, 124, 0.35);
+}
+
+/* Top Bar */
+.qgms-topbar {
+    background: #111116;
+    color: #cbd5e1;
+    font-size: 13px;
+    padding: 8px 0;
+    border-bottom: 2px solid var(--primary-pink);
+}
+.qgms-topbar a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-right: 20px;
+}
+.qgms-topbar a:hover {
+    color: var(--primary-pink);
+}
+.qgms-topbar i {
+    color: var(--primary-pink);
+    margin-right: 6px;
+}
+
+/* Main Navbar */
+.qgms-navbar {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.qgms-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+.qgms-brand img {
+    height: 52px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.qgms-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+.qgms-brand-title {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #1e1e24;
+    line-height: 1.2;
+}
+.qgms-brand-sub {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary-pink);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #334155 !important;
+    padding: 8px 14px !important;
+    transition: color 0.2s, transform 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-pink) !important;
+}
+
+.btn-donate {
+    background: var(--primary-pink) !important;
+    color: #fff !important;
+    font-weight: 700;
+    padding: 8px 22px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: 0 4px 14px var(--glow-pink);
+    transition: all 0.3s ease;
+}
+.btn-donate:hover {
+    background: var(--primary-pink-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--glow-pink);
+}
+
+/* Video Gate (Intro Page) */
+.gate-hero {
+    background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+    min-height: calc(100vh - 120px);
+    padding: 60px 0 80px;
+}
+.gate-title {
+    font-size: 38px;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.gate-subtitle {
+    font-size: 17px;
+    color: #475569;
+    max-width: 650px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.3);
+    border: 5px solid #ffffff;
+    background: #000;
+    aspect-ratio: 16 / 9;
+}
+.video-wrapper iframe, .video-wrapper #youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.watch-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.watch-badge .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #ef4444;
+    border-radius: 50%;
+    animation: pulseRed 1.5s infinite;
+}
+@keyframes pulseRed {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.progress-container {
+    max-width: 860px;
+    margin: 0 auto 30px;
+}
+.progress-bar-wrap {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ec4899, #E4007C);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Download / Action Buttons */
+.gate-actions {
+    margin-top: 25px;
+    text-align: center;
+}
+.gate-actions-title {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    transition: color 0.4s ease;
+}
+.gate-actions-title.locked {
+    color: #64748b;
+}
+.gate-actions-title.unlocked {
+    color: var(--primary-pink);
+    animation: bounceText 1s infinite alternate;
+}
+@keyframes bounceText {
+    from { transform: translateY(0); }
+    to { transform: translateY(-4px); }
+}
+
+.btn-download-app {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 32px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+    margin: 6px 8px;
+}
+.btn-download-app.disabled {
+    background: #cbd5e1 !important;
+    color: #64748b !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    filter: grayscale(1);
+    opacity: 0.7;
+    pointer-events: none;
+}
+.btn-download-ios {
+    background: #0f172a;
+}
+.btn-download-ios:not(.disabled):hover {
+    background: #1e293b;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.3);
+}
+.btn-download-android {
+    background: var(--primary-pink);
+}
+.btn-download-android:not(.disabled):hover {
+    background: var(--primary-pink-hover);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px var(--glow-pink);
+}
+
+.btn-enter-website {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 42px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 800;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    animation: pulseGreen 2s infinite;
+}
+.btn-enter-website:hover {
+    transform: translateY(-3px) scale(1.05);
+    color: #fff;
+    box-shadow: 0 18px 40px rgba(16, 185, 129, 0.6);
+}
+@keyframes pulseGreen {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { box-shadow: 0 0 0 18px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Modal Styling */
+.qgms-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+.qgms-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.qgms-modal-card {
+    background: #ffffff;
+    border-radius: 24px;
+    max-width: 440px;
+    width: 100%;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.qgms-modal-overlay.active .qgms-modal-card {
+    transform: translateY(0) scale(1);
+}
+.qgms-modal-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6, #3b82f6);
+}
+.qgms-modal-icon {
+    width: 70px;
+    height: 70px;
+    background: #eff6ff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: #3b82f6;
+    font-size: 32px;
+}
+.qgms-modal-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+.qgms-modal-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.qgms-modal-btn {
+    width: 100%;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.qgms-modal-btn:hover {
+    background: #1e40af;
+}
+
+/* Register Modal (Category Video Gate) */
+.reg-video-modal {
+    max-width: 780px !important;
+    text-align: left !important;
+}
+.reg-tabs {
+    display: flex;
+    overflow-x: auto;
+    border-bottom: 2px solid #e2e8f0;
+    gap: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    scrollbar-width: none;
+}
+.reg-tab-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 16px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #64748b;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.reg-tab-btn:hover {
+    color: var(--primary-pink);
+}
+.reg-tab-btn.active {
+    color: var(--primary-pink);
+    border-bottom-color: var(--primary-pink);
+}
+.reg-warning-box {
+    background: #fefce8;
+    border: 1px solid #fef08a;
+    color: #854d0e;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Floating Audio / Sound Toggle */
+.sound-toggle-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #0f172a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+.sound-toggle-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary-pink);
+}
