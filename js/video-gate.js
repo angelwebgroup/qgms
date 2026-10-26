@@ -253,16 +253,32 @@
     }
 
     // Opens the Registration Form Modal
-    function openRegistrationModal() {
+    function openRegistrationModal(immediate) {
         const modal = document.getElementById('reg-auto-modal-overlay');
-        if (modal) {
-            setTimeout(function () {
-                modal.classList.add('active');
-                const firstInput = modal.querySelector('input[name="full_name"]');
-                if (firstInput) {
-                    firstInput.focus();
-                }
-            }, 600);
+        if (!modal) return;
+
+        const showModal = function () {
+            modal.style.display = 'flex';
+            modal.style.opacity = '1';
+            modal.style.visibility = 'visible';
+            modal.classList.add('active');
+
+            const formContent = document.getElementById('reg-form-content');
+            if (formContent) formContent.style.display = 'block';
+
+            const successDiv = document.getElementById('reg-form-success');
+            if (successDiv) successDiv.style.display = 'none';
+
+            const firstInput = modal.querySelector('input[name="full_name"]');
+            if (firstInput) {
+                firstInput.focus();
+            }
+        };
+
+        if (immediate) {
+            showModal();
+        } else {
+            setTimeout(showModal, 400);
         }
     }
 
@@ -270,10 +286,15 @@
         const modal = document.getElementById('reg-auto-modal-overlay');
         if (modal) {
             modal.classList.remove('active');
+            modal.style.display = 'none';
         }
         // Navigate user straight to the activated website
         window.location.href = config.redirectUrl || 'index.php';
     }
+
+    // Expose globally for instant inline clicks
+    window.openRegistrationModal = function () { openRegistrationModal(true); };
+    window.closeRegistrationModal = closeRegistrationModalAndEnterWebsite;
 
     // Setup interactive events
     document.addEventListener('DOMContentLoaded', function () {

@@ -93,7 +93,7 @@ require_once __DIR__ . '/includes/header.php';
                         <i class="fa fa-heart"></i>
                         <span>Enter Kindness Station (Website) &rarr;</span>
                     </a>
-                    <button type="button" id="btn-reopen-reg" class="btn ml-md-3 mt-3 mt-md-0" style="background: #ffffff; color: var(--primary-brand); border: 2px solid var(--primary-brand); padding: 14px 28px; border-radius: 50px; font-weight: 700; box-shadow: 0 4px 15px rgba(0, 154, 209, 0.15); transition: all 0.2s;">
+                    <button type="button" id="btn-reopen-reg" onclick="window.openRegistrationModal()" class="btn ml-md-3 mt-3 mt-md-0" style="background: #ffffff; color: var(--primary-brand); border: 2px solid var(--primary-brand); padding: 14px 28px; border-radius: 50px; font-weight: 700; box-shadow: 0 4px 15px rgba(0, 154, 209, 0.15); transition: all 0.2s; cursor: pointer;">
                         <i class="fa fa-user-plus mr-1"></i>
                         <span>Open Registration Form</span>
                     </button>
@@ -117,7 +117,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="qgms-modal-stripe"></div>
         
         <!-- Close / Cross (Cors) Button with Skip Tooltip -->
-        <button type="button" class="reg-modal-close-btn" id="btn-close-reg-modal" title="Skip registration & enter website" aria-label="Skip registration">
+        <button type="button" class="reg-modal-close-btn" id="btn-close-reg-modal" onclick="window.closeRegistrationModal()" title="Skip registration & enter website" aria-label="Skip registration">
             <i class="fa fa-times"></i>
         </button>
 
@@ -187,7 +187,7 @@ require_once __DIR__ . '/includes/header.php';
                         <i class="fa fa-check-circle"></i>
                         <span>Submit Registration &amp; Enter Website &rarr;</span>
                     </button>
-                    <a href="index.php" class="btn-reg-skip" id="btn-skip-intro-reg">
+                    <a href="index.php" class="btn-reg-skip" id="btn-skip-intro-reg" onclick="window.closeRegistrationModal(); return false;">
                         <span>Skip for now &amp; Enter Website &rarr;</span>
                     </a>
                 </div>

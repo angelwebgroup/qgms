@@ -15,16 +15,77 @@ $pageTitle = "Child Wishes Gallery - Inspiring Kindness Foundation | QGMS";
 $pageDesc = "Browse and support urgent wishes for underprivileged children through our verified partner networks.";
 $currentPage = "wishes";
 
-$pdo = Database::getConnection();
 $selectedCategory = $_GET['cat'] ?? 'all';
+$wishesList = [];
 
-if ($selectedCategory !== 'all') {
-    $stmt = $pdo->prepare("SELECT * FROM wishes WHERE category = ? ORDER BY id DESC");
-    $stmt->execute([$selectedCategory]);
-} else {
-    $stmt = $pdo->query("SELECT * FROM wishes ORDER BY id DESC");
+$pdo = Database::getConnection();
+if ($pdo) {
+    try {
+        if ($selectedCategory !== 'all') {
+            $stmt = $pdo->prepare("SELECT * FROM wishes WHERE category = ? ORDER BY id DESC");
+            $stmt->execute([$selectedCategory]);
+        } else {
+            $stmt = $pdo->query("SELECT * FROM wishes ORDER BY id DESC");
+        }
+        $wishesList = $stmt->fetchAll();
+    } catch (Throwable $e) {
+        error_log("Failed to query wishes: " . $e->getMessage());
+    }
 }
-$wishesList = $stmt->fetchAll();
+
+// Fallback to sample wishes if database is unseeded or offline
+if (empty($wishesList)) {
+    $fallbackWishes = [
+        [
+            'id' => 1,
+            'child_name' => 'Marcus T.',
+            'category' => 'Calfresh',
+            'title' => 'Nutritional Support & Fresh Produce Box',
+            'description' => 'Providing monthly organic fresh fruit and vegetable hampers for Marcus and his sibling.',
+            'amount_needed' => 120.00,
+            'amount_raised' => 85.00,
+            'image_url' => 'images/courses/k1.jpeg'
+        ],
+        [
+            'id' => 2,
+            'child_name' => 'Elena R.',
+            'category' => 'EAhousing',
+            'title' => 'School Supplies & Warm Winter Clothing',
+            'description' => 'Essential educational kit, backpack, notebooks, and a warm winter jacket for 3rd grade.',
+            'amount_needed' => 150.00,
+            'amount_raised' => 150.00,
+            'image_url' => 'images/courses/k2.jpg'
+        ],
+        [
+            'id' => 3,
+            'child_name' => 'Liam S.',
+            'category' => 'NCCP',
+            'title' => 'Pediatric Therapy & Creative Learning Kit',
+            'description' => 'Specialized learning toys and developmental tools supporting Liam with special needs.',
+            'amount_needed' => 200.00,
+            'amount_raised' => 140.00,
+            'image_url' => 'images/courses/k3.jpeg'
+        ],
+        [
+            'id' => 4,
+            'child_name' => 'Sophia K.',
+            'category' => 'Santa Clara County',
+            'title' => 'Art & Music Enrichment Supplies',
+            'description' => 'Inspiring young creative expression with paints, canvases, and keyboard music lessons.',
+            'amount_needed' => 95.00,
+            'amount_raised' => 60.00,
+            'image_url' => 'images/about/b1.jpg'
+        ]
+    ];
+
+    if ($selectedCategory !== 'all') {
+        $wishesList = array_values(array_filter($fallbackWishes, function($w) use ($selectedCategory) {
+            return strtolower($w['category']) === strtolower($selectedCategory);
+        }));
+    } else {
+        $wishesList = $fallbackWishes;
+    }
+}
 
 require_once __DIR__ . '/includes/header.php';
 ?>

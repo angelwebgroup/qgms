@@ -20,10 +20,14 @@ $pdo = Database::getConnection();
 $wishId = isset($_GET['wish_id']) ? (int)$_GET['wish_id'] : 0;
 $selectedWish = null;
 
-if ($wishId > 0) {
-    $stmt = $pdo->prepare("SELECT * FROM wishes WHERE id = ?");
-    $stmt->execute([$wishId]);
-    $selectedWish = $stmt->fetch();
+if ($wishId > 0 && $pdo) {
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM wishes WHERE id = ?");
+        $stmt->execute([$wishId]);
+        $selectedWish = $stmt->fetch();
+    } catch (Throwable $e) {
+        error_log("Donate wish lookup error: " . $e->getMessage());
+    }
 }
 
 require_once __DIR__ . '/includes/header.php';

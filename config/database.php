@@ -9,7 +9,7 @@ require_once __DIR__ . '/config.php';
 class Database {
     private static ?PDO $instance = null;
 
-    public static function getConnection(): PDO {
+    public static function getConnection(): ?PDO {
         if (self::$instance === null) {
             $dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
             $options = [
@@ -24,7 +24,8 @@ class Database {
                 self::ensureSchema(self::$instance);
             } catch (PDOException $e) {
                 error_log("Database connection failed: " . $e->getMessage());
-                throw new RuntimeException("Database connection error. Please contact administrator.");
+                // Return null instead of throwing fatal uncaught exception that crashes with HTTP 500
+                return null;
             }
         }
 
