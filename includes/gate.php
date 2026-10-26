@@ -82,15 +82,17 @@ class VideoGate {
         // Log completion in database
         try {
             $pdo = Database::getConnection();
-            $stmt = $pdo->prepare("INSERT INTO video_unlock_logs (session_id, video_id, duration_watched, ip_address, user_agent) VALUES (?, ?, ?, ?, ?)");
-            $stmt->execute([
-                session_id(),
-                $videoId,
-                $durationWatched,
-                $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1',
-                $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown'
-            ]);
-        } catch (Exception $e) {
+            if ($pdo) {
+                $stmt = $pdo->prepare("INSERT INTO video_unlock_logs (session_id, video_id, duration_watched, ip_address, user_agent) VALUES (?, ?, ?, ?, ?)");
+                $stmt->execute([
+                    session_id(),
+                    $videoId,
+                    $durationWatched,
+                    $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1',
+                    $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown'
+                ]);
+            }
+        } catch (Throwable $e) {
             error_log("Failed to log video unlock: " . $e->getMessage());
         }
 

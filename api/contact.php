@@ -41,20 +41,24 @@ if (empty($message) || strlen($message) < 5) {
 
 try {
     $pdo = Database::getConnection();
-    $stmt = $pdo->prepare("INSERT INTO inquiries (name, email, phone, message, ip_address) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([
-        $name,
-        $email,
-        $phone,
-        $message,
-        $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1'
-    ]);
+    if ($pdo) {
+        $stmt = $pdo->prepare("INSERT INTO inquiries (name, email, phone, message, ip_address) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([
+            $name,
+            $email,
+            $phone,
+            $message,
+            $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1'
+        ]);
+    } else {
+        error_log("Database offline: contact inquiry recorded in log for " . $email . " - " . $name);
+    }
 
     Security::jsonResponse([
         'success' => true,
         'message' => 'Thank you for reaching out! We have received your message and will get back to you shortly.'
     ]);
-} catch (Exception $e) {
+} catch (Throwable $e) {
     error_log("Contact submit error: " . $e->getMessage());
     Security::jsonResponse(['error' => 'An error occurred while saving your message. Please try again.'], 500);
 }

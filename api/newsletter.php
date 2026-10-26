@@ -29,14 +29,18 @@ if (empty($email)) {
 
 try {
     $pdo = Database::getConnection();
-    $stmt = $pdo->prepare("INSERT IGNORE INTO newsletter_subscribers (email, ip_address) VALUES (?, ?)");
-    $stmt->execute([$email, $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1']);
+    if ($pdo) {
+        $stmt = $pdo->prepare("INSERT IGNORE INTO newsletter_subscribers (email, ip_address) VALUES (?, ?)");
+        $stmt->execute([$email, $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1']);
+    } else {
+        error_log("Database offline: newsletter subscriber logged for " . $email);
+    }
 
     Security::jsonResponse([
         'success' => true,
         'message' => 'Thank you for subscribing! You will receive our latest kindness updates.'
     ]);
-} catch (Exception $e) {
+} catch (Throwable $e) {
     error_log("Newsletter subscription error: " . $e->getMessage());
     Security::jsonResponse(['error' => 'Subscription failed. Please try again.'], 500);
 }

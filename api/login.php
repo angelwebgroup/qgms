@@ -31,6 +31,10 @@ if (empty($username) || empty($password)) {
 
 try {
     $pdo = Database::getConnection();
+    if (!$pdo) {
+        Security::jsonResponse(['error' => 'Database connection unavailable. Please try again shortly.'], 503);
+    }
+
     $stmt = $pdo->prepare("SELECT id, username, email, password_hash, role FROM users WHERE username = ? OR email = ? LIMIT 1");
     $stmt->execute([$username, $username]);
     $user = $stmt->fetch();
@@ -51,7 +55,7 @@ try {
     } else {
         Security::jsonResponse(['error' => 'Invalid username or password.'], 401);
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     error_log("Login error: " . $e->getMessage());
     Security::jsonResponse(['error' => 'An authentication error occurred. Please try again.'], 500);
 }

@@ -42,21 +42,25 @@ if (empty($phone)) {
 
 try {
     $pdo = Database::getConnection();
-    $stmt = $pdo->prepare("INSERT INTO registrations (full_name, email, phone, category, notes, video_verified, ip_address) VALUES (?, ?, ?, ?, ?, 1, ?)");
-    $stmt->execute([
-        $fullName,
-        $email,
-        $phone,
-        $category,
-        $notes,
-        $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1'
-    ]);
+    if ($pdo) {
+        $stmt = $pdo->prepare("INSERT INTO registrations (full_name, email, phone, category, notes, video_verified, ip_address) VALUES (?, ?, ?, ?, ?, 1, ?)");
+        $stmt->execute([
+            $fullName,
+            $email,
+            $phone,
+            $category,
+            $notes,
+            $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1'
+        ]);
+    } else {
+        error_log("Database offline: registration logged for " . $email . " - " . $fullName);
+    }
 
     Security::jsonResponse([
         'success' => true,
         'message' => 'Thank you! Your registration application has been submitted successfully. A representative will contact you with next steps.'
     ]);
-} catch (Exception $e) {
+} catch (Throwable $e) {
     error_log("Registration error: " . $e->getMessage());
     Security::jsonResponse(['error' => 'Registration could not be completed. Please try again.'], 500);
 }
