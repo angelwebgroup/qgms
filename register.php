@@ -1,9 +1,8 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Registration Portal with Program Options (Calfresh, EAhousing, NCCP, etc.)
- * - Updated with official Logo Azure Blue (#009ad1) and Violet branding
- * - Includes close ('✕') / skip button so users can navigate freely
  */
 
 require_once __DIR__ . '/config/config.php';
@@ -13,8 +12,8 @@ require_once __DIR__ . '/includes/security.php';
 // Enforce initial site access gate
 VideoGate::requireUnlocked();
 
-$pageTitle = "Register - Inspiring Kindness Foundation | QGMS";
-$pageDesc = "Register for community programs, support, and kindness partner networks.";
+$pageTitle = "Registration Portal - QGMS | Run by QGM Inc.";
+$pageDesc = "Register for non-profit aid logistics, community welfare programs, and the Inspiring Kindness campaign.";
 $currentPage = "register";
 
 require_once __DIR__ . '/includes/header.php';
@@ -87,7 +86,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <i class="fa fa-bookmark"></i> Calfresh Application
                             </span>
                             <h1 class="font-weight-bold" style="color: #0f172a; font-size: 28px; margin-top: 6px;">Complete Your Registration</h1>
-                            <p class="text-muted" style="font-size: 14.5px; max-width: 540px; margin: 0 auto;">Fill out your details below to submit your enrollment with Inspiring Kindness Foundation &bull; QGMS.</p>
+                            <p class="text-muted" style="font-size: 14.5px; max-width: 540px; margin: 0 auto;">Fill out your details below to submit your enrollment with QGMS (Run by QGM Inc.). Registration details are routed directly to henrik@qg-ms.com.</p>
                         </div>
 
                         <!-- Select Program Category -->

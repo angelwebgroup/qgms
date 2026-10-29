@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Child Wishes & Kindness Catches Gallery
  */
 
@@ -11,8 +12,8 @@ require_once __DIR__ . '/includes/gate.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "Child Wishes Gallery - Inspiring Kindness Foundation | QGMS";
-$pageDesc = "Browse and support urgent wishes for underprivileged children through our verified partner networks.";
+$pageTitle = "Child Wishes Gallery - QGMS | Non-Profit Aid Logistics";
+$pageDesc = "Browse and support urgent wishes for underprivileged children through verified non-profit networks powered by QGMS.";
 $currentPage = "wishes";
 
 $selectedCategory = $_GET['cat'] ?? 'all';

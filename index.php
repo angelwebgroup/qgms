@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * The Kindness Station - Home Page
  */
 
@@ -10,35 +11,38 @@ require_once __DIR__ . '/includes/gate.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "The Kindness Station - Catching & Recognizing Acts of Goodness | QGMS";
-$pageDesc = "Welcome to Inspiring Kindness - The world's first platform that transforms real acts of care into a positive ripple effect.";
+$pageTitle = "QGMS - Quality Giving Management System | Run by QGM Inc.";
+$pageDesc = "QGMS, operated by QGM Inc., provides enterprise system infrastructure optimizing non-profit aid logistics and powering the Inspiring Kindness campaign.";
 $currentPage = "index";
 
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- Hero Banner: The Kindness Station -->
+<!-- Hero Banner: The Kindness Station & QGMS Platform -->
 <section class="page-hero-wrapper text-center">
     <div class="page-hero-grid-pattern"></div>
     <div class="container page-hero-content">
         <div class="hero-tag-badge home-hero-badge">
-            <i class="fa fa-heart"></i> Recognizing Everyday Compassion
+            <i class="fa fa-cubes"></i> Operated by QGM Inc. &bull; System Provider for Non-Profit Aid Logistics
         </div>
         <h1 class="page-hero-title mb-3">
             THE <span class="hero-highlight-text">KINDNESS</span> STATION
         </h1>
         <p class="h4 font-weight-light mb-3" style="color: #bae6fd; max-width: 780px; margin: 0 auto; font-size: 20px; line-height: 1.5; text-shadow: 0 2px 10px rgba(0,0,0,0.4);">
-            Catching &amp; Recognizing Acts of Goodness Around the World
+            Enterprise Technology Optimizing Non-Profit Aid Logistics &amp; Goodness Worldwide
         </p>
-        <p class="lead mb-4" style="color: #e2e8f0; max-width: 720px; margin: 0 auto; font-size: 16px; line-height: 1.8;">
-            Inspiring Kindness is the world's first platform that transforms real acts of care into an ongoing ripple effect &mdash; catching kindness, rewarding compassion, and inspiring others to do the same.
+        <p class="lead mb-4" style="color: #e2e8f0; max-width: 760px; margin: 0 auto; font-size: 16px; line-height: 1.8;">
+            QGMS is the system provider for the Inspiring Kindness (IK) campaign run by non-profit organizations &mdash; delivering auditable aid logistics, digital beneficiary intake, and community-wide recognition.
         </p>
         <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-            <a href="register.php" class="btn btn-donate mr-sm-3 mb-2" style="padding: 14px 38px; font-size: 15px;">
-                <i class="fa fa-sparkles mr-1"></i> Catch Kindness Now
+            <a href="aid-logistics.php" class="btn btn-donate mr-sm-3 mb-2" style="padding: 14px 34px; font-size: 15px;">
+                <i class="fa fa-sliders mr-1"></i> Aid Logistics Solutions
+            </a>
+            <a href="register.php" class="btn btn-hero-glass mr-sm-3 mb-2">
+                <i class="fa fa-user-plus mr-1"></i> Register Now
             </a>
             <a href="about.php" class="btn btn-hero-glass mb-2">
-                <span>Learn How It Works &rarr;</span>
+                <span>The IK Campaign &rarr;</span>
             </a>
         </div>
     </div>
@@ -69,6 +73,61 @@ require_once __DIR__ . '/includes/header.php';
                     <a href="register.php" class="btn btn-default join-btn" style="background-color: var(--primary-brand); color: white; border-color: var(--primary-brand); border-radius: 50px; text-transform: uppercase; padding: 14px 40px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 8px 25px var(--glow-brand);">
                         REGISTER NOW
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 1B: Non-Profit Aid Logistics Optimization -->
+<section class="py-5" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border-top: 1px solid #e0f2fe; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-brand); font-size: 12px;">Enterprise Infrastructure</span>
+                <h2 class="font-weight-bold mb-3" style="color: #0f172a; font-size: 32px;">
+                    Optimizing Non-Profit <span style="color: var(--primary-brand);">Aid Logistics</span>
+                </h2>
+                <div class="title-bdr" style="width: 60px; height: 3px; background: var(--primary-brand); margin: 12px 0 20px;"></div>
+                <p style="font-size: 15px; line-height: 1.8; color: #475569;">
+                    <strong>QGMS is operated by QGM Inc.</strong> as the enterprise system provider for community non-profits. While non-profits run the ground campaigns (including the Inspiring Kindness campaign), QGM Inc. provides the technological infrastructure required to optimize aid distribution, track verified impact, and coordinate multi-agency operations.
+                </p>
+                <div class="mt-4">
+                    <a href="aid-logistics.php" class="btn btn-donate mr-3" style="padding: 12px 28px;">
+                        <span>Explore Full System Capabilities &rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="p-3 bg-white rounded-xl shadow-sm h-100" style="border-radius: 16px; border-left: 4px solid var(--primary-brand);">
+                            <i class="fa fa-users text-primary mb-2" style="font-size: 24px;"></i>
+                            <h6 class="font-weight-bold text-dark mb-1">Beneficiary Intake</h6>
+                            <p class="text-muted mb-0" style="font-size: 13px; line-height: 1.6;">Automated routing for CalFresh, EA Housing, NCCP &amp; county aid.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="p-3 bg-white rounded-xl shadow-sm h-100" style="border-radius: 16px; border-left: 4px solid #7e2b90;">
+                            <i class="fa fa-gift text-purple mb-2" style="font-size: 24px; color: #7e2b90;"></i>
+                            <h6 class="font-weight-bold text-dark mb-1">Digital Gift Cards</h6>
+                            <p class="text-muted mb-0" style="font-size: 13px; line-height: 1.6;">Zero leakage giving vouchers delivered directly to phones.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="p-3 bg-white rounded-xl shadow-sm h-100" style="border-radius: 16px; border-left: 4px solid #10b981;">
+                            <i class="fa fa-sitemap text-success mb-2" style="font-size: 24px;"></i>
+                            <h6 class="font-weight-bold text-dark mb-1">Multi-Agency Sync</h6>
+                            <p class="text-muted mb-0" style="font-size: 13px; line-height: 1.6;">Unites non-profits, county offices, and community sponsors.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="p-3 bg-white rounded-xl shadow-sm h-100" style="border-radius: 16px; border-left: 4px solid #f59e0b;">
+                            <i class="fa fa-check-square-o text-warning mb-2" style="font-size: 24px;"></i>
+                            <h6 class="font-weight-bold text-dark mb-1">Delivery Verification</h6>
+                            <p class="text-muted mb-0" style="font-size: 13px; line-height: 1.6;">Real-time photographic proof &amp; auditable fulfillment logs.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -367,7 +426,7 @@ require_once __DIR__ . '/includes/header.php';
                 GET IN <span style="color: var(--primary-brand);">TOUCH</span>
             </h2>
             <div class="title-bdr" style="width: 80px; height: 3px; background: var(--primary-brand); margin: 15px auto;"></div>
-            <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Connect with Henrik and the Inspiring Kindness Foundation team.</p>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Connect with Henrik and the QGMS / QGM Inc. team.</p>
         </div>
 
         <div class="row mb-5">

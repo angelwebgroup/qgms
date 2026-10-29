@@ -1,22 +1,16 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Introductory Video Access Gatekeeper with Automatic Post-Watch Registration Form
- * 
- * Requirement: Watch introductory video to completion to unlock website.
- * Upon completion:
- * - Website activates immediately
- * - Registration Form Modal pops up automatically
- * - User can skip registration anytime via close ('✕') or skip button to enter the website
- * - Brand styling matched strictly to the official Logo (#009ad1 / #7e2b90)
  */
 
 require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/includes/security.php';
 require_once __DIR__ . '/includes/gate.php';
 
-$pageTitle = "Unlock Your Exclusive Access - Inspiring Kindness Foundation";
-$pageDesc = "Watch the introductory video to completion to activate website access and open registration.";
+$pageTitle = "Unlock Your Exclusive Access - QGMS | QGM Inc.";
+$pageDesc = "Watch the introductory video to activate QGMS website access and open registration.";
 $currentPage = "intro";
 
 // Check if user has already unlocked
@@ -69,8 +63,16 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Action Area -->
         <div class="gate-actions">
             <h2 id="gate-action-title" class="gate-actions-title <?= $alreadyUnlocked ? 'unlocked' : 'locked' ?>">
-                <?= $alreadyUnlocked ? '🎉 Access Unlocked! Download Now or Enter Below' : 'Complete the video to unlock access' ?>
+                <?= $alreadyUnlocked ? '🎉 Access Unlocked! Register or Download Below' : 'Complete the video to unlock access' ?>
             </h2>
+
+            <!-- Registration Button (Above iOS & Android Download Buttons) -->
+            <div class="mb-3 text-center">
+                <button type="button" id="btn-intro-register" onclick="window.openRegistrationModal()" class="btn-download-app btn-download-register" title="Open Registration Form">
+                    <i class="fa fa-user-plus" style="font-size: 20px;"></i>
+                    <span>Register / Sign Up</span>
+                </button>
+            </div>
 
             <div class="d-flex flex-wrap justify-content-center align-items-center">
                 <!-- iOS Download Button -->
@@ -125,12 +127,13 @@ require_once __DIR__ . '/includes/header.php';
         <div id="reg-form-content">
             <div class="d-flex align-items-center mb-2">
                 <span class="reg-modal-badge">
-                    <i class="fa fa-check-circle" style="color: #0284c7;"></i> Video Completed &bull; Website Unlocked
+                    <i class="fa fa-check-circle" style="color: #0284c7;"></i> QGMS &bull; Non-Profit Aid Logistics
                 </span>
             </div>
-            <h2 class="reg-modal-title">Welcome to Inspiring Kindness!</h2>
+            <h2 class="reg-modal-title">Register with QGMS</h2>
             <p class="reg-modal-desc">
-                Your website access is now activated! Please complete your registration below to enroll, or skip to enter the website directly.
+                Quality Giving Management System &bull; Powered by QGM Inc.<br>
+                Please complete your registration below to enroll in non-profit aid logistics programs or the Inspiring Kindness campaign.
             </p>
 
             <form id="intro-reg-form" novalidate>
@@ -201,10 +204,10 @@ require_once __DIR__ . '/includes/header.php';
             </div>
             <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Registration Completed!</h3>
             <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">
-                Thank you for joining Inspiring Kindness. Your profile has been created and your access to the Kindness Station is fully unlocked.
+                Thank you for joining QGMS. Your registration details have been submitted and sent to henrik@qg-ms.com. Your platform access is now fully unlocked.
             </p>
             <a href="index.php" class="btn-reg-submit text-decoration-none">
-                <span>Enter Kindness Station Now &rarr;</span>
+                <span>Enter QGMS Platform &rarr;</span>
             </a>
             <p class="text-muted mt-3" style="font-size: 13px;">
                 Redirecting automatically in <span id="reg-countdown">3</span> seconds...

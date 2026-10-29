@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Core Configuration File
  */
 
@@ -41,9 +42,11 @@ define('DB_PASS', getenv('DB_PASS') !== false ? getenv('DB_PASS') : '');
 define('DB_CHARSET', 'utf8mb4');
 
 // Site Info
-define('SITE_NAME', 'Inspiring Kindness Foundation - QGMS');
-define('SITE_TAGLINE', 'Catching & Recognizing Acts of Goodness');
-define('SITE_EMAIL', 'Henrik@qg-ms.com');
+define('SITE_NAME', 'QGMS - Quality Giving Management System');
+define('COMPANY_NAME', 'QGM Inc.');
+define('SITE_TAGLINE', 'Enterprise System Provider for Non-Profit Aid Logistics & IK Campaigns');
+define('SITE_EMAIL', 'henrik@qg-ms.com');
+define('REGISTRATION_NOTIFY_EMAIL', 'henrik@qg-ms.com');
 define('SITE_PHONE', '+1 6692385620');
 define('SITE_ADDRESS', '2241 Churchill Dr. Milpitas, CA 95035');
 define('BASE_URL', '/qgms/');

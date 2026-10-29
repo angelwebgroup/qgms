@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Common Header Template
  */
 
@@ -62,10 +63,10 @@ $currentPage = $currentPage ?? basename($_SERVER['PHP_SELF'], '.php');
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <a class="navbar-brand qgms-brand" href="index.php">
-                    <img src="images/about/logo.png" alt="Inspiring Kindness Logo">
+                    <img src="images/about/logo.png" alt="QGMS Logo">
                     <div class="qgms-brand-text">
-                        <span class="qgms-brand-title">Inspiring Kindness</span>
-                        <span class="qgms-brand-sub">Foundation &bull; QGMS</span>
+                        <span class="qgms-brand-title">QGMS</span>
+                        <span class="qgms-brand-sub">Run by QGM Inc. &bull; Aid Logistics</span>
                     </div>
                 </a>
 
@@ -78,18 +79,18 @@ $currentPage = $currentPage ?? basename($_SERVER['PHP_SELF'], '.php');
                         <li class="nav-item <?= $currentPage === 'index' ? 'active' : '' ?>">
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
+                        <li class="nav-item <?= $currentPage === 'aid-logistics' ? 'active' : '' ?>">
+                            <a class="nav-link" href="aid-logistics.php">Aid Logistics</a>
+                        </li>
                         <li class="nav-item dropdown <?= in_array($currentPage, ['about', 'why-us']) ? 'active' : '' ?>">
                             <a class="nav-link dropdown-toggle" href="about.php" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                About Us
+                                IK Campaign
                             </a>
                             <div class="dropdown-menu shadow-sm border-0" aria-labelledby="aboutDropdown">
-                                <a class="dropdown-item" href="about.php">Our Movement & Mission</a>
+                                <a class="dropdown-item" href="about.php">About the IK Campaign</a>
                                 <a class="dropdown-item" href="why-us.php">Why Kindness Matters</a>
                                 <a class="dropdown-item" href="about.php#methodology">The Methodology</a>
                             </div>
-                        </li>
-                        <li class="nav-item <?= $currentPage === 'why-us' ? 'active' : '' ?>">
-                            <a class="nav-link" href="why-us.php">Why Us?</a>
                         </li>
                         <li class="nav-item <?= $currentPage === 'team' ? 'active' : '' ?>">
                             <a class="nav-link" href="team.php">Team</a>

@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Privacy Policy
  */
 
@@ -10,7 +11,7 @@ require_once __DIR__ . '/includes/gate.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "Privacy Policy - Inspiring Kindness Foundation | QGMS";
+$pageTitle = "Privacy Policy - QGMS | Run by QGM Inc.";
 $currentPage = "privacy";
 
 require_once __DIR__ . '/includes/header.php';

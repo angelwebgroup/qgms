@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Leadership Team Page
  */
 
@@ -10,8 +11,8 @@ require_once __DIR__ . '/includes/gate.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "Leadership Team - Inspiring Kindness Foundation | QGMS";
-$pageDesc = "Meet Henrik and the dedicated leaders driving the Inspiring Kindness movement worldwide.";
+$pageTitle = "Leadership Team - QGMS | Run by QGM Inc.";
+$pageDesc = "Meet Henrik and the dedicated team driving QGMS system architecture and non-profit logistics.";
 $currentPage = "team";
 
 require_once __DIR__ . '/includes/header.php';
@@ -22,13 +23,13 @@ require_once __DIR__ . '/includes/header.php';
     <div class="page-hero-grid-pattern"></div>
     <div class="container page-hero-content">
         <div class="hero-tag-badge">
-            <i class="fa fa-users"></i> Visionaries &bull; Leaders &bull; Scientists
+            <i class="fa fa-users"></i> Visionaries &bull; Leaders &bull; Engineers
         </div>
         <h1 class="page-hero-title">
             OUR <span class="hero-highlight-text">LEADERSHIP TEAM</span>
         </h1>
         <p class="page-hero-subtitle">
-            Passionate visionaries, behavioral scientists, and community advocates dedicated to recognizing kindness across the globe.
+            Passionate visionaries, system engineers, and community advocates dedicated to empowering non-profit aid logistics worldwide.
         </p>
         <div class="hero-breadcrumb">
             <a href="index.php"><i class="fa fa-home"></i> Home</a>
@@ -51,13 +52,13 @@ require_once __DIR__ . '/includes/header.php';
             <div class="col-lg-7">
                 <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-brand); font-size: 12px;">Founder &amp; Chief Visionary</span>
                 <h2 class="font-weight-bold mb-2" style="color: #0f172a; font-size: 34px;">Henrik</h2>
-                <p class="text-muted font-italic mb-3" style="font-size: 15px;">Quality Giving Management &bull; Inspiring Kindness Foundation</p>
+                <p class="text-muted font-italic mb-3" style="font-size: 15px;">Quality Giving Management &bull; QGM Inc.</p>
                 
                 <p style="font-size: 15px; line-height: 1.8; color: #475569;">
                     For over a decade, Henrik has spearheaded research and real-world initiatives dedicated to transforming human attention into practical compassion. Recognizing the profound deficits caused by divisive social media algorithms, Henrik developed the unique Inspiring Kindness methodology: <em>Catch, Recognize, Reward, Inspire</em>.
                 </p>
                 <p style="font-size: 15px; line-height: 1.8; color: #475569;">
-                    Under his leadership, QGMS has partnered with non-profits, law enforcement agencies, and community foundations to implement measurable acts of kindness that directly uplift underprivileged children and families.
+                    Under his leadership, QGM Inc. provides QGMS to non-profits, law enforcement agencies, and community foundations to implement measurable acts of kindness and optimize aid logistics that directly uplift underprivileged children and families.
                 </p>
                 <div class="d-flex gap-3 mt-4">
                     <a href="mailto:<?= SITE_EMAIL ?>" class="btn btn-outline-dark mr-3" style="border-radius: 50px; padding: 10px 26px; font-weight: 600;">
@@ -72,7 +73,7 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- Additional Advisory & Community Leaders -->
         <div class="text-center mb-5 mt-4">
-            <h3 class="font-weight-bold" style="color: #0f172a;">Foundation Advisors &amp; Community Champions</h3>
+            <h3 class="font-weight-bold" style="color: #0f172a;">System Advisors &amp; Community Champions</h3>
             <p class="text-muted">Uniting cross-disciplinary expertise in social welfare, technology, and community outreach.</p>
         </div>
 

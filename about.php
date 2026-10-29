@@ -1,7 +1,8 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
- * About Us Page
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
+ * About QGMS & The Inspiring Kindness Campaign
  */
 
 require_once __DIR__ . '/config/config.php';
@@ -10,8 +11,8 @@ require_once __DIR__ . '/includes/gate.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "About Us - Inspiring Kindness Foundation | QGMS";
-$pageDesc = "Learn about Inspiring Kindness, our history, scientific methodology, vision, and mission.";
+$pageTitle = "About QGMS & The IK Campaign | Run by QGM Inc.";
+$pageDesc = "Learn about QGMS, operated by QGM Inc. as the enterprise system provider powering non-profit aid logistics and the Inspiring Kindness campaign.";
 $currentPage = "about";
 
 require_once __DIR__ . '/includes/header.php';
@@ -22,18 +23,18 @@ require_once __DIR__ . '/includes/header.php';
     <div class="page-hero-grid-pattern"></div>
     <div class="container page-hero-content">
         <div class="hero-tag-badge">
-            <i class="fa fa-info-circle"></i> Our Movement &bull; Our Mission
+            <i class="fa fa-info-circle"></i> Run by QGM Inc. &bull; System Provider
         </div>
         <h1 class="page-hero-title">
-            ABOUT <span class="hero-highlight-text">OUR MOVEMENT</span>
+            ABOUT <span class="hero-highlight-text">QGMS &amp; IK CAMPAIGN</span>
         </h1>
         <p class="page-hero-subtitle">
-            Transforming everyday compassion into a measurable global ripple effect &mdash; catching acts of goodness and empowering communities worldwide.
+            Enterprise technology powering non-profit aid logistics and transforming everyday compassion into a measurable global ripple effect.
         </p>
         <div class="hero-breadcrumb">
             <a href="index.php"><i class="fa fa-home"></i> Home</a>
             <span>&bull;</span>
-            <span class="text-white">About Us</span>
+            <span class="text-white">About</span>
         </div>
     </div>
 </section>
@@ -43,18 +44,18 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-brand); font-size: 12px;">Who We Are</span>
+                <span class="badge badge-pill badge-primary px-3 py-2 text-uppercase mb-3" style="background: var(--primary-brand); font-size: 12px;">System Provider</span>
                 <h2 class="font-weight-bold mb-4" style="color: #0f172a; font-size: 34px;">
-                    Know About <span style="color: var(--primary-brand);">Inspiring Kindness</span>
+                    QGMS &amp; The <span style="color: var(--primary-brand);">Inspiring Kindness Campaign</span>
                 </h2>
                 <p style="font-size: 15px; line-height: 1.8; color: #475569;">
-                    At Inspiring Kindness, we believe that the smallest act of care can start a ripple strong enough to change the world. Our mission is simple &mdash; to inspire people everywhere to recognize, reward, and share kindness in ways that create lasting emotional and social impact.
+                    <strong>QGMS (Quality Giving Management System)</strong> is operated by <strong>QGM Inc.</strong> We are the dedicated system provider providing the software, intake workflows, and auditable logistics architecture for the <strong>Inspiring Kindness (IK) campaign</strong>, which is run by independent non-profit organizations.
                 </p>
                 <p style="font-size: 15px; line-height: 1.8; color: #475569;">
-                    For more than a decade, we've developed and tested a unique methodology built on emotional intelligence, behavioral science, and real-world compassion. This approach &mdash; <strong>Catch. Recognize. Reward. Inspire.</strong> &mdash; transforms everyday moments of kindness into an ongoing chain of positive action.
+                    For more than a decade, our team has developed and refined a unique methodology built on emotional intelligence, behavioral science, and real-world compassion. This approach &mdash; <strong>Catch. Recognize. Reward. Inspire.</strong> &mdash; transforms everyday moments of kindness into an ongoing chain of positive action.
                 </p>
                 <p style="font-size: 15px; line-height: 1.8; color: #475569;">
-                    What began as a question &mdash; <em>"How can we make people want to care?"</em> &mdash; has become a movement supported by communities, organizations, and even law enforcement, proving that attention and inspiration can be powerful tools for peace.
+                    By bridging cutting-edge digital infrastructure with non-profit humanitarian aid, QGMS equips charities and county welfare organizations to manage program logistics, distribute verified aid vouchers, and reward positive civic contributions.
                 </p>
             </div>
             <div class="col-lg-6">

@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Why Us & Why Kindness Matters Page
  */
 
@@ -10,7 +11,7 @@ require_once __DIR__ . '/includes/gate.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "Why Us? Why Kindness Matters - Inspiring Kindness Foundation";
+$pageTitle = "Why Us? Why Kindness Matters - Inspiring Kindness Campaign | QGMS";
 $pageDesc = "Discover why acts of kindness heal, connect, and inspire measurable social transformation.";
 $currentPage = "why-us";
 

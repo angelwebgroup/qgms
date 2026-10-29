@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Contact Us Page
  */
 
@@ -11,8 +12,8 @@ require_once __DIR__ . '/includes/security.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "Contact Us - Inspiring Kindness Foundation | QGMS";
-$pageDesc = "Get in touch with Henrik and the Inspiring Kindness Foundation team.";
+$pageTitle = "Contact Us - QGMS | Run by QGM Inc.";
+$pageDesc = "Get in touch with Henrik and the QGMS / QGM Inc. team for system inquiries and non-profit aid logistics.";
 $currentPage = "contact";
 
 require_once __DIR__ . '/includes/header.php';

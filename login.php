@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Login Portal
  */
 
@@ -17,8 +18,8 @@ if (!empty($_SESSION['user_id'])) {
     exit;
 }
 
-$pageTitle = "Login - Inspiring Kindness Foundation | QGMS";
-$pageDesc = "Sign in to access your QGMS account, kindness logs, and gift card dashboard.";
+$pageTitle = "Login - QGMS | Run by QGM Inc.";
+$pageDesc = "Sign in to access your QGMS account, aid logistics, and gift card dashboard.";
 $currentPage = "login";
 
 require_once __DIR__ . '/includes/header.php';

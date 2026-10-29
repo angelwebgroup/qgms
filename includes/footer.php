@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Common Footer Template
  */
 ?>
@@ -11,9 +12,9 @@
                 <!-- Column 1: About Us -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="footer-about-col">
-                        <h4 style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase;">About Us</h4>
+                        <h4 style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase;">About QGMS</h4>
                         <p style="font-size: 13.5px; line-height: 1.7; color: #94a3b8;">
-                            We are passionate about creating meaningful experiences and solutions that make a difference. Our mission is to inspire, connect, and empower people through innovative ideas and thoughtful design.
+                            QGMS is operated by QGM Inc. as the enterprise system provider powering non-profit aid logistics and the Inspiring Kindness campaign run by dedicated non-profit organizations.
                         </p>
                         <div class="social text-left mt-3">
                             <a href="<?= LINK_FACEBOOK ?>" target="_blank" rel="noopener" class="text-white mr-3"><i class="fa fa-facebook"></i></a>
@@ -30,7 +31,8 @@
                         <h4 style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase;">Quick Links</h4>
                         <ul class="list-unstyled" style="font-size: 14px; line-height: 2.2;">
                             <li><a href="index.php" style="color: #94a3b8; text-decoration: none;"><i class="fa fa-angle-right mr-2 text-danger"></i> Home</a></li>
-                            <li><a href="about.php" style="color: #94a3b8; text-decoration: none;"><i class="fa fa-angle-right mr-2 text-danger"></i> About Us</a></li>
+                            <li><a href="aid-logistics.php" style="color: #94a3b8; text-decoration: none;"><i class="fa fa-angle-right mr-2 text-danger"></i> Aid Logistics</a></li>
+                            <li><a href="about.php" style="color: #94a3b8; text-decoration: none;"><i class="fa fa-angle-right mr-2 text-danger"></i> IK Campaign</a></li>
                             <li><a href="why-us.php" style="color: #94a3b8; text-decoration: none;"><i class="fa fa-angle-right mr-2 text-danger"></i> Why Kindness Matters</a></li>
                             <li><a href="team.php" style="color: #94a3b8; text-decoration: none;"><i class="fa fa-angle-right mr-2 text-danger"></i> Leadership Team</a></li>
                             <li><a href="wishes.php" style="color: #94a3b8; text-decoration: none;"><i class="fa fa-angle-right mr-2 text-danger"></i> Child Wishes Gallery</a></li>
@@ -88,7 +90,7 @@
 
             <div class="border-top pt-4 mt-3 text-center" style="border-color: rgba(255,255,255,0.1) !important;">
                 <p style="font-size: 13px; color: #64748b; margin: 0;">
-                    &copy; <?= date('Y') ?> <?= SITE_NAME ?>. All rights reserved.
+                    &copy; <?= date('Y') ?> QGMS &bull; Run by QGM Inc. System Provider for Non-Profit Aid Logistics &amp; IK Campaigns. All rights reserved.
                 </p>
             </div>
         </div>
@@ -103,7 +105,7 @@
             </div>
             <h3 class="qgms-modal-title">Coming Soon!</h3>
             <p class="qgms-modal-desc">
-                We are working diligently to bring the official QGMS Inspiring Kindness app to your iOS and Android devices. The mobile apps are currently in final refinement. Stay tuned!
+                We are working diligently to bring the official QGMS mobile application to your iOS and Android devices. The apps are currently in final refinement. Stay tuned!
             </p>
             <button id="close-app-modal" type="button" class="qgms-modal-btn">Got it, thanks!</button>
         </div>

@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Terms and Conditions
  */
 
@@ -10,7 +11,7 @@ require_once __DIR__ . '/includes/gate.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "Terms and Conditions - Inspiring Kindness Foundation | QGMS";
+$pageTitle = "Terms and Conditions - QGMS | Run by QGM Inc.";
 $currentPage = "terms";
 
 require_once __DIR__ . '/includes/header.php';
@@ -27,7 +28,7 @@ require_once __DIR__ . '/includes/header.php';
             TERMS &amp; <span class="hero-highlight-text">CONDITIONS</span>
         </h1>
         <p class="page-hero-subtitle">
-            Guidelines, rights, and mutual agreements governing your use of Inspiring Kindness Foundation and QGMS platforms.
+            Guidelines, rights, and mutual agreements governing your use of the QGMS system operated by QGM Inc.
         </p>
         <div class="hero-breadcrumb">
             <a href="index.php"><i class="fa fa-home"></i> Home</a>
@@ -41,12 +42,12 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container" style="max-width: 900px; line-height: 1.8; color: #334155;">
         <h3 class="font-weight-bold mb-3">1. Acceptance of Terms</h3>
         <p>
-            By accessing or using the Inspiring Kindness Foundation web application, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of these terms, please do not use our services.
+            By accessing or using the QGMS platform operated by QGM Inc., you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of these terms, please do not use our services.
         </p>
 
-        <h3 class="font-weight-bold mb-3 mt-4">2. Program Participation</h3>
+        <h3 class="font-weight-bold mb-3 mt-4">2. Program Participation &amp; Aid Logistics</h3>
         <p>
-            All participants, donors, and guardians registered with QGMS agree to provide truthful, accurate information when registering for support programs (such as Calfresh, EAhousing, NCCP, etc.) or when redeeming Gift Cards for Giving.
+            All participants, donors, non-profit partners, and beneficiaries registered with QGMS agree to provide truthful, accurate information when registering for support programs (such as Calfresh, EAhousing, NCCP, etc.) or when redeeming Gift Cards for Giving.
         </p>
 
         <h3 class="font-weight-bold mb-3 mt-4">3. Code of Conduct</h3>
@@ -54,9 +55,9 @@ require_once __DIR__ . '/includes/header.php';
             Our community is established upon respect, dignity, and mutual empowerment. Content submitted that promotes hate speech, discrimination, commercial exploitation, or harassment will be immediately removed and the offending account terminated.
         </p>
 
-        <h3 class="font-weight-bold mb-3 mt-4">4. Disclaimers &amp; Limitations</h3>
+        <h3 class="font-weight-bold mb-3 mt-4">4. Disclaimers &amp; System Provider Role</h3>
         <p>
-            Inspiring Kindness Foundation provides this platform as a charitable vehicle for positive social mobilization. While we verify partner organizations and wishes to the highest practical standard, services are provided on an "as-is" and "as-available" basis.
+            QGMS is developed and maintained by QGM Inc. as an enterprise system provider powering non-profit aid logistics and the Inspiring Kindness campaign. Non-profit campaigns and welfare initiatives are administered independently by partner organizations. Services are provided on an "as-is" and "as-available" basis.
         </p>
     </div>
 </section>

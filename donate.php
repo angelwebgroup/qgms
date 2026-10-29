@@ -1,6 +1,7 @@
 <?php
 /**
- * QGMS - Inspiring Kindness Foundation
+ * QGMS - Quality Giving Management System
+ * Run by QGM Inc. - System Provider for Non-Profit Aid Logistics & IK Campaigns
  * Donate & Gift Card for Giving Portal
  */
 
@@ -12,7 +13,7 @@ require_once __DIR__ . '/includes/security.php';
 // Enforce Video Gatekeeper
 VideoGate::requireUnlocked();
 
-$pageTitle = "Donate & Obtain a Gift Card for Giving - Inspiring Kindness | QGMS";
+$pageTitle = "Donate & Obtain a Gift Card for Giving - QGMS | Run by QGM Inc.";
 $pageDesc = "Empower acts of compassion. Support an underprivileged child or reward an inspiring act of goodness.";
 $currentPage = "donate";
 
