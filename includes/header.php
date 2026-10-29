@@ -66,7 +66,7 @@ $currentPage = $currentPage ?? basename($_SERVER['PHP_SELF'], '.php');
                     <img src="images/about/logo.png" alt="QGMS Logo">
                     <div class="qgms-brand-text">
                         <span class="qgms-brand-title">QGMS</span>
-                        <span class="qgms-brand-sub">Run by QGM Inc. &bull; Aid Logistics</span>
+                        <span class="qgms-brand-sub">Run by QGM Inc.</span>
                     </div>
                 </a>
 
